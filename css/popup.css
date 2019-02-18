@@ -1,0 +1,289 @@
+html {
+  font-size: 40px !important;
+}
+.flexBlock {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+.flex1 {
+  flex: 1;
+}
+.inlineBlock {
+  display: inline-block;
+}
+.clear {
+  clear: both;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.alignRight {
+  text-align: right!important;
+}
+.PopUpBox {
+  display: none;
+}
+.PopUpBox.show {
+  display: block;
+}
+.PopUpBox {
+  position: absolute;
+  width: 835px;
+  height: 800px;
+  top: 60%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background: #080b2f;
+}
+.P2PopUpBox .levelContainer {
+  margin-bottom: .5rem;
+}
+.P2PopUpBox .keyContent {
+  padding: .3rem .2rem;
+}
+.P2PopUpBox .keyContent .contentLi {
+  height: 1.4rem!important;
+  line-height: 1.4rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+.levelBox {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  margin-right: .8rem;
+  padding: .3rem;
+}
+.levelBox .insideBox {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: .8rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+.levelBox.oneLevel {
+  border: 0.1rem solid #4ea9ff;
+}
+.levelBox.oneLevel .insideBox {
+  border: 0.05rem dashed #4ea9ff;
+  color: #4ea9ff;
+}
+.levelBox.twoLevel {
+  border: 0.1rem solid #0067ff;
+}
+.levelBox.twoLevel .insideBox {
+  border: 0.05rem dashed #0067ff;
+  color: #0067ff;
+}
+.levelBox.threeLevel {
+  border: 0.1rem solid #00ff00;
+}
+.levelBox.threeLevel .insideBox {
+  border: 0.05rem dashed #00ff00;
+  color: #00ff00;
+}
+.levelBox.fourLevel {
+  border: 0.1rem solid #ffff00;
+}
+.levelBox.fourLevel .insideBox {
+  border: 0.05rem dashed #ffff00;
+  color: #ffff00;
+}
+.levelBox.fiveLevel {
+  border: 0.1rem solid #ffd700;
+}
+.levelBox.fiveLevel .insideBox {
+  border: 0.05rem dashed #ffd700;
+  color: #ffd700;
+}
+.levelBox.sixLevel {
+  border: 0.1rem solid #fc0105;
+}
+.levelBox.sixLevel .insideBox {
+  border: 0.05rem dashed #fc0105;
+  color: #fc0105;
+}
+.P2PopUpBox .Popuplegend .LegendLi2 + .LegendLi2 {
+  margin-left: 1.2rem;
+}
+.P2PopUpBox .Popuplegend .OneLevel {
+  background-color: #fd4800;
+}
+.P2PopUpBox .Popuplegend .TwoLevel {
+  background-color: #f1ec3f;
+}
+.P2PopUpBox .Popuplegend .ThreeLevel {
+  background-color: #72e75e;
+}
+.P2PopUpBox .splitLineBox {
+  padding: 0 .8rem;
+}
+.P2PopUpBox .splitLine {
+  margin: .3rem 0 .4rem 0;
+  border-bottom: .025rem dashed #0f5a6d;
+}
+.PopUpHeader {
+  height: 2.65rem;
+  text-align: left;
+  background: url(../img/popup3_top.png) no-repeat;
+  background-size: 100% 100%;
+}
+.PopUpHeader .PaddingContent {
+  padding-top: 1.3rem;
+  position: relative;
+}
+.PopUpHeader h3 {
+  font-size: .88rem;
+  line-height: .88rem;
+  color: #0deff6;
+  border-bottom: .025rem solid #01d4ff;
+  height: 1.55rem;
+}
+.PopUpHeader .PopUpclose {
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  right: 1.75rem;
+  top: 1.6rem;
+  background: url(../img/off.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.PopUpContent {
+  background: url(../img/popup3_middle.png) repeat-y;
+  background-size: 100% .125rem;
+}
+.PopUpContent .PaddingContent {
+  padding-top: .33rem;
+  text-align: left;
+}
+.PopUpContent .ListTitle {
+  height: 1.75rem;
+  font-size: .725rem;
+  line-height: .75rem;
+  color: #bbd4ff;
+  padding: .38rem 0 0 0;
+  text-align: left;
+}
+.PopUpContent .contentItem {
+  height: 1.43rem;
+  text-align: left;
+  font-size: .73rem;
+  line-height: .73rem;
+  padding: .33rem 0 0 0;
+}
+.PopUpContent .contentItem .name {
+  color: #bac7e4;
+}
+.PopUpContent .contentItem .value {
+  color: #fff;
+}
+.PopUpContent .contentItem:nth-child(1) {
+  width: 25%;
+}
+.keyContent {
+  padding: .4rem 0;
+  border: .025rem dashed #0d7296;
+}
+.keyContent .contentList .contentLi {
+  min-height: 1.45rem;
+  padding-left: .8rem;
+  padding-right: .8rem;
+}
+.keyContent .leftRow,
+.keyContent .rightRow,
+.keyContent .centerRow {
+  font-size: .75rem;
+  line-height: 1.45rem;
+  height: 1.45rem;
+}
+.keyContent .leftRow {
+  text-align: left;
+}
+.keyContent .centerRow {
+  text-align: center;
+}
+.keyContent .rightRow {
+  text-align: right;
+}
+.keyContent1 {
+  border: none;
+}
+.keyContent1 .contentList .contentLi {
+  padding-left: 0;
+  padding-right: 0;
+}
+.popUpcanvasBox {
+  width: 22.7rem;
+  height: 10rem;
+  margin-top: -0.5rem;
+}
+.Popuplegend {
+  text-align: center;
+}
+.Popuplegend .OneLevel {
+  background: #fbe83a;
+}
+.Popuplegend .TwoLevel {
+  background: #00cdff;
+}
+.Popuplegend .LegendList {
+  padding-top: .3rem;
+}
+.Popuplegend .WaterQulLine {
+  top: -0.1rem;
+}
+.hrefDiv {
+  text-align: right;
+}
+.hrefDiv a {
+  font-size: .68rem;
+  line-height: 1rem;
+  color: #10ecff;
+  text-align: right;
+}
+.PopUpBottom {
+  margin-top: -2px;
+  height: 3.4rem;
+  background: url(../img/popup3_bottom.png) no-repeat;
+  background-size: 100% 100%;
+}
+.PopUpBottom .PaddingContent {
+  padding-top: .13rem;
+}
+.canvasTab {
+  height: 2.68rem;
+  margin-top: .6rem;
+  display: inline-block;
+}
+.canvasTab .tabSpan {
+  padding: 0 0.68rem;
+  font-size: .75rem;
+  display: inline-block;
+  background: #273b5b;
+  color: #cedffe;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 1.63rem;
+  line-height: 1.63rem;
+}
+.canvasTab .tabSpan + .tabSpan {
+  margin-left: .5rem;
+}
+.canvasTab .tabSpan.active {
+  background: #00e5ff;
+  color: #0f0920;
+}
+.canvasTab.alignRight {
+  float: right;
+  height: 1.6rem;
+}
