@@ -26,6 +26,7 @@ html {
 .alignRight {
   text-align: right!important;
 }
+/* 具体样式 start*/
 .PopUpBox {
   display: none;
   position: absolute;
@@ -37,184 +38,50 @@ html {
   transform: translate(-50%, -50%);
   overflow: hidden;
   background: #080b2f;
+  border: 1px solid #797979;
+  padding: 0 8px 10px 0;
 }
 .PopUpBox.show {
   display: block;
 }
-.levelBox {
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
-  margin-right: .8rem;
-  padding: .3rem;
-}
-.levelBox .insideBox {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  font-size: .8rem;
-  line-height: 2.4rem;
-  text-align: center;
-}
-.levelBox.oneLevel {
-  border: 0.1rem solid #4ea9ff;
-}
-.levelBox.oneLevel .insideBox {
-  border: 0.05rem dashed #4ea9ff;
-  color: #4ea9ff;
-}
-.levelBox.twoLevel {
-  border: 0.1rem solid #0067ff;
-}
-.levelBox.twoLevel .insideBox {
-  border: 0.05rem dashed #0067ff;
-  color: #0067ff;
-}
-.levelBox.threeLevel {
-  border: 0.1rem solid #00ff00;
-}
-.levelBox.threeLevel .insideBox {
-  border: 0.05rem dashed #00ff00;
-  color: #00ff00;
-}
-.levelBox.fourLevel {
-  border: 0.1rem solid #ffff00;
-}
-.levelBox.fourLevel .insideBox {
-  border: 0.05rem dashed #ffff00;
-  color: #ffff00;
-}
-.levelBox.fiveLevel {
-  border: 0.1rem solid #ffd700;
-}
-.levelBox.fiveLevel .insideBox {
-  border: 0.05rem dashed #ffd700;
-  color: #ffd700;
-}
-.levelBox.sixLevel {
-  border: 0.1rem solid #fc0105;
-}
-.levelBox.sixLevel .insideBox {
-  border: 0.05rem dashed #fc0105;
-  color: #fc0105;
-}
-.P2PopUpBox .Popuplegend .LegendLi2 + .LegendLi2 {
-  margin-left: 1.2rem;
-}
-.P2PopUpBox .Popuplegend .OneLevel {
-  background-color: #fd4800;
-}
-.P2PopUpBox .Popuplegend .TwoLevel {
-  background-color: #f1ec3f;
-}
-.P2PopUpBox .Popuplegend .ThreeLevel {
-  background-color: #72e75e;
-}
-.P2PopUpBox .levelContainer {
-  margin-bottom: .5rem;
-}
-.P2PopUpBox .keyContent {
-  padding: .3rem .2rem;
-}
-.P2PopUpBox .keyContent .contentLi {
-  height: 1.4rem!important;
-  line-height: 1.4rem;
-  padding-left: 0;
-  padding-right: 0;
-}
-.P2PopUpBox .splitLineBox {
-  padding: 0 .8rem;
-}
-.P2PopUpBox .splitLine {
-  margin: .3rem 0 .4rem 0;
-  border-bottom: .025rem dashed #0f5a6d;
-}
 .PopUpHeader {
-  height: 2.65rem;
+  height: 72px;
+  padding-left: 36px;
+  border-bottom: 4px solid #ccc;
   text-align: left;
-  background: url(../img/popup3_top.png) no-repeat;
-  background-size: 100% 100%;
 }
 .PopUpHeader .PaddingContent {
-  padding-top: 1.3rem;
+  padding-top: 2px;
   position: relative;
 }
 .PopUpHeader h3 {
-  font-size: .88rem;
-  line-height: .88rem;
-  color: #0deff6;
-  border-bottom: .025rem solid #01d4ff;
-  height: 1.55rem;
+  font-size: 32px;
+  line-height: 70px;
+  color: #00ccff;
 }
 .PopUpHeader .PopUpclose {
   position: absolute;
   width: .5rem;
   height: .5rem;
-  right: 1.75rem;
-  top: 1.6rem;
+  right: 14px;
+  top: 23px;
   background: url(../images/off.png) no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 }
 .PopUpContent .PaddingContent {
-  padding-top: .33rem;
+  padding-top: 7px;
   text-align: left;
 }
-.PopUpContent .ListTitle {
-  height: 1.75rem;
-  font-size: .725rem;
-  line-height: .75rem;
-  color: #bbd4ff;
-  padding: .38rem 0 0 0;
-  text-align: left;
-}
-.PopUpContent .contentItem {
-  height: 1.43rem;
-  text-align: left;
-  font-size: .73rem;
-  line-height: .73rem;
-  padding: .33rem 0 0 0;
-}
-.PopUpContent .contentItem .name {
-  color: #bac7e4;
-}
-.PopUpContent .contentItem .value {
-  color: #fff;
-}
-.PopUpContent .contentItem:nth-child(1) {
-  width: 25%;
-}
-.keyContent {
-  padding: .4rem 0;
-  border: .025rem dashed #0d7296;
+.PopUpContent .levelContainer {
+  height: 220px;
+  padding: 7px 36px 10px 36px;
 }
 .keyContent .contentList .contentLi {
-  min-height: 1.45rem;
-  padding-left: .8rem;
-  padding-right: .8rem;
-}
-.keyContent .leftRow,
-.keyContent .rightRow,
-.keyContent .centerRow {
-  font-size: .75rem;
-  line-height: 1.45rem;
-  height: 1.45rem;
-}
-.keyContent .leftRow {
   text-align: left;
-}
-.keyContent .centerRow {
-  text-align: center;
-}
-.keyContent .rightRow {
-  text-align: right;
-}
-.keyContent1 {
-  border: none;
-}
-.keyContent1 .contentList .contentLi {
-  padding-left: 0;
-  padding-right: 0;
+  line-height: 56px;
+  font-size: 20px;
+  color: #00ccff;
 }
 .popUpcanvasBox {
   width: 22.7rem;
@@ -245,13 +112,6 @@ html {
   color: #10ecff;
   text-align: right;
 }
-.PopUpBottom {
-  margin-top: -2px;
-  height: 3.4rem;
-}
-.PopUpBottom .PaddingContent {
-  padding-top: .13rem;
-}
 .canvasTab {
   height: 2.68rem;
   margin-top: .6rem;
@@ -277,5 +137,57 @@ html {
 }
 .canvasTab.alignRight {
   float: right;
+  margin-top: .4rem;
   height: 1.6rem;
+}
+.levelBox {
+  width: 200px;
+  height: 100%;
+}
+.levelBox .insideBox {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.levelBox .levelText {
+  margin: 10px 0;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+}
+.insideBox.oneLevel {
+  border: 1px solid #4ea9ff;
+}
+.insideBox.oneLevel .levelText {
+  color: #4ea9ff;
+}
+.insideBox.twoLevel {
+  border: 1px solid #0067ff;
+}
+.insideBox.twoLevel .levelText {
+  color: #0067ff;
+}
+.insideBox.threeLevel {
+  border: 1px solid #00ff00;
+}
+.insideBox.threeLevel .levelText {
+  color: #00ff00;
+}
+.insideBox.fourLevel {
+  border: 1px solid #ffff00;
+}
+.insideBox.fourLevel .levelText {
+  color: #ffff00;
+}
+.insideBox.fiveLevel {
+  border: 1px solid #ffd700;
+}
+.insideBox.fiveLevel .levelText {
+  color: #ffd700;
+}
+.insideBox.sixLevel {
+  border: 1px solid #fc0105;
+}
+.insideBox.sixLevel .levelText {
+  color: #fc0105;
 }

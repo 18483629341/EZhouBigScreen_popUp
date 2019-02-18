@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>鄂州大屏</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/gasWater.css">
 
@@ -603,11 +604,11 @@
         </div>
         <!--右边end-->
 
-        <!-- 弹窗1 水质净化厂 start -->
-        <div class="PopUpBox show  P2PopUpBox PopUpBox_kai" id="PopUpBox_kai">
+        <!-- 弹窗1 纱帽 start -->
+        <div class="PopUpBox show  PopUpBox_sha" id="PopUpBox_sha">
             <div class="PopUpHeader">
                 <div class="PaddingContent">
-                    <h3>凡口开发区</h3>
+                    <h3>纱帽</h3>
                     <span class="inlineBlock PopUpclose"></span>
                 </div>
             </div>
@@ -615,106 +616,95 @@
             <div class="PopUpContent">
                 <div class="PaddingContent">
                     <div class="flexBlock levelContainer">
-                        <div class="inlineBlock  levelBox sixLevel">
+                        <div class="  levelBox ">
                             <!-- 根据等级样式为 Ⅰ类对应样式为 oneLevel twoLevel  ...-->
-                            <div class="insideBox">
-                                劣Ⅵ
+                            <div class="insideBox sixLevel">
+                                <div class="waterIcon"></div>
                             </div>
+                            <div class="levelText">劣Ⅴ类</div>
+                            <!-- Ⅰ Ⅱ Ⅲ Ⅵ Ⅴ Ⅳ -->
                         </div>
-                        <div class="keyContent keyContent1">
+                        <div class="keyContent flex1">
                             <div class="contentList">
                                 <div class="contentLi flexBlock">
-                                    <div class="leftRow flex1">污染源地址：
-                                        <span class="leftRowValue">湖北省武汉市江汉区XXX号</span>
+                                    <div class="leftRow flex1">所属流域：
+                                        <span class="leftRowValue">长江干流</span>
                                     </div>
                                 </div>
                                 <div class="contentLi flexBlock">
-                                    <div class="leftRow flex1">统一社会信用代码：
-                                        <span class="leftRowValue">11111111111111111111</span>
+                                    <div class="leftRow flex1">所属区域：
+                                        <span class="leftRowValue">鄂州市-华容区</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">控制级别：
+                                        <span class="leftRowValue">国控</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">水质考核标准：
+                                        <span class="leftRowValue">Ⅴ类</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <div class="keyContent">
-                            <div class="contentList">
-                                <div class="contentLi flexBlock">
-                                    <div class="leftRow flex1">管控级别：
-                                        <span class="leftRowValue"> 国控</span>
-                                    </div>
-                                    <div class="leftRow flex1">排水去向：
-                                        <span class="leftRowValue"> 长江</span>
-                                    </div>
-                                </div>
-                                <div class="contentLi flexBlock">
-                                    <div class="leftRow flex1">设计处理能力：
-                                        <span class="leftRowValue"> 15万吨</span>
-                                    </div>
-                                    <div class="leftRow flex1">执行排放标准：
-                                        <span class="leftRowValue"> 一级B</span>
-                                    </div>
-                                </div>
-                                <div class="contentLi flexBlock">
-                                    <div class="leftRow flex1">主题处理工艺：
-                                        <span class="leftRowValue"> 改良UCT</span>
-                                    </div>
-                                    <div class="leftRow flex1">投运时间：
-                                        <span class="leftRowValue"> 2016-10</span>
-                                    </div>
-                                </div>
+                    <ul class="nav nav-pills selfTabs flexBlock" role="tablist">
+                        <li role="presentation" class="selfTab active">
+                            <a href="#sha_data" role="tab" data-toggle="tab">监测数据</a>
+                        </li>
+                        <li role="presentation" class="selfTab ">
+                            <a href="#sha_photo" role="tab" data-toggle="tab">现场照片</a>
+                        </li>
+                        <li role="presentation" class="selfTab ">
+                            <a href="#sha_video" role="tab" data-toggle="tab">现场视频</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel " class="tab-pane RightTableDiv active" id="sha_data">
+                            <div class="canvasTab">
+                                <span class="tabSpan active" data-name="goodWeather">氨氮</span>
+                                <span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
+                                <span class="tabSpan " data-name="pm2.5">总磷</span>
+                            </div>
+                            <div class="popUpcanvasBox" id="P2jingCanvas">
+                            </div>
+                            <div class="legend2 Popuplegend">
+                                <ol class="LegendList">
+                                    <li class="LegendLi2">
+                                        <span class="WaterQulLine  OneLevel"></span>
+                                        <span class="RemarkName">氨氮</span>
+                                    </li>
+                                    <li class="LegendLi2">
+                                        <span class="WaterQulLine TwoLevel"></span>
+                                        <span class="RemarkName">高锰酸钾指数</span>
+                                    </li>
+                                    <li class="LegendLi2">
+                                        <span class="WaterQulLine ThreeLevel"></span>
+                                        <span class="RemarkName">总磷</span>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
-                        <div class="canvasTab">
-                            <span class="tabSpan active" data-name="goodWeather">氨氮</span>
-                            <span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
-                            <span class="tabSpan " data-name="pm2.5">总磷</span>
+                        <div role="tabpanel " class="tab-pane RightTableDiv active" id="sha_photo">
+                            2
                         </div>
-                        <div class="canvasTab alignRight">
-                            <div class="InfoListContent flexBlock">
-                                <div class="selectLi flex1">
+                        <div role="tabpanel " class="tab-pane RightTableDiv active" id="sha_video">
+                            3
+                        </div>
+                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popUpcanvasBox" id="P2jingCanvas">
-                        </div>
-                        <div class="legend2 Popuplegend">
-                            <ol class="LegendList">
-                                <li class="LegendLi2">
-                                    <span class="WaterQulLine  OneLevel"></span>
-                                    <span class="RemarkName">氨氮</span>
-                                </li>
-                                <li class="LegendLi2">
-                                    <span class="WaterQulLine TwoLevel"></span>
-                                    <span class="RemarkName">高锰酸钾指数</span>
-                                </li>
-                                <li class="LegendLi2">
-                                    <span class="WaterQulLine ThreeLevel"></span>
-                                    <span class="RemarkName">总磷</span>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
                 </div>
-                <!-- PopUpContent end-->
-                <div class="PopUpBottom">
-                    <div class="PaddingContent">
-                        <div class="hrefDiv">
-                            <a href="#" target="_blank">查看详情
-                                <span class="inlineBlock rightArrow"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PopUpBottom end-->
             </div>
-            <!-- 弹窗1 水质净化厂 end -->
+            
         </div>
-        <script src="./script/jquery-3.2.1.js"></script>
-
-        <script src="./script/canvas-bg.js"></script>
-        <script src="./script/echarts.min.js"></script>
-        <script src="./script/gasWater.js"></script>
+        <!-- 弹窗1 纱帽 end -->
+    </div>
+    <script src="./script/jquery-3.2.1.js"></script>
+    <script src="./script/bootstrap.js"></script>
+    <script src="./script/canvas-bg.js"></script>
+    <script src="./script/echarts.min.js"></script>
+    <script src="./script/gasWater.js"></script>
 
 </body>
 
