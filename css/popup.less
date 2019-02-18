@@ -1,9 +1,32 @@
+@FontBlue:#00ccff;
+@BackBlue:#080b2f;
+@borderSliver:#ccc;
+@borderGrey:#797979;
 @OneLevelC: #4ea9ff;
 @TwoLevelC: #0067ff;
 @ThreeLevelC: #00ff00;
 @FourLevelC: #ffff00;
 @FiveLevelC: #ffd700;
 @SixLevelC: #fc0105;
+#tabs(){
+	.tabsList{
+		width:375px;
+		height: 36px;
+		color:#fff;
+		border:1px solid @borderGrey; 
+		border-radius:3px;
+	}
+	.tabli{
+	    flex:1;
+		background:#080b2f;
+	}
+	.tabli.active{
+		background:#00ccff;
+	}
+	.tabli+.tabli{
+		border-left:1px solid @borderGrey; 
+	}
+}
 html{
 	font-size: 40px !important;
 }
@@ -32,38 +55,23 @@ html{
 .alignRight{
 	text-align: right!important;
 }
+
 .PopUpBox{
-    display:none;
-}
-.PopUpBox.show{
-    display:block;
-}
-.PopUpBox{
+	display:none;
 	position: absolute;
 	width: 835px;
 	height: 800px;
-	top: 60%;
-	left: 50%;
+	top:1080px;
+	left: 1920px;
 	z-index: 100;
 	transform: translate(-50%,-50%);
 	overflow: hidden;
 	background:#080b2f;
 }
-.P2PopUpBox{
-	.levelContainer{
-		margin-bottom: .5rem;
-	}
-	.keyContent{
-		padding:.3rem .2rem;
-		.contentLi{
-			height: 1.4rem!important;
-			line-height:1.4rem;
-			padding-left: 0; 
-			padding-right: 0; 
-		}
-	}
-	
+.PopUpBox.show{
+    display:block;
 }
+
 .levelBox{
 	width:3.6rem;
 	height:3.6rem;
@@ -138,6 +146,18 @@ html{
 			 background-color: #72e75e;
 		 }
 	}
+	.levelContainer{
+		margin-bottom: .5rem;
+	}
+	.keyContent{
+		padding:.3rem .2rem;
+		.contentLi{
+			height: 1.4rem!important;
+			line-height:1.4rem;
+			padding-left: 0; 
+			padding-right: 0; 
+		}
+	}
 	.splitLineBox{
 		padding: 0 .8rem;
 	}
@@ -172,14 +192,14 @@ html{
 		height: .5rem;
 		right: 1.75rem;
 		top:1.6rem;
-        background: url(../img/off.png) no-repeat;
+        background: url(../images/off.png) no-repeat;
 		background-size: 100% 100%;
 		cursor: pointer;
 	}
 }
 .PopUpContent{
-	background: url(../img/popup3_middle.png) repeat-y;
-	background-size: 100% .125rem;
+	// background: url(../img/popup3_middle.png) repeat-y;
+	// background-size: 100% .125rem
 	.PaddingContent{
 		padding-top: .33rem;
 		text-align: left;
@@ -279,8 +299,8 @@ html{
 .PopUpBottom{
 	margin-top: -2px;
 	height: 3.4rem;
-	background: url(../img/popup3_bottom.png) no-repeat;
-	background-size: 100% 100%;
+	// background: url(../img/popup3_bottom.png) no-repeat;
+	// background-size: 100% 100%;
 	.PaddingContent{
 		padding-top: .13rem;
 	

@@ -28,32 +28,18 @@ html {
 }
 .PopUpBox {
   display: none;
-}
-.PopUpBox.show {
-  display: block;
-}
-.PopUpBox {
   position: absolute;
   width: 835px;
   height: 800px;
-  top: 60%;
-  left: 50%;
+  top: 1080px;
+  left: 1920px;
   z-index: 100;
   transform: translate(-50%, -50%);
   overflow: hidden;
   background: #080b2f;
 }
-.P2PopUpBox .levelContainer {
-  margin-bottom: .5rem;
-}
-.P2PopUpBox .keyContent {
-  padding: .3rem .2rem;
-}
-.P2PopUpBox .keyContent .contentLi {
-  height: 1.4rem!important;
-  line-height: 1.4rem;
-  padding-left: 0;
-  padding-right: 0;
+.PopUpBox.show {
+  display: block;
 }
 .levelBox {
   width: 3.6rem;
@@ -124,6 +110,18 @@ html {
 .P2PopUpBox .Popuplegend .ThreeLevel {
   background-color: #72e75e;
 }
+.P2PopUpBox .levelContainer {
+  margin-bottom: .5rem;
+}
+.P2PopUpBox .keyContent {
+  padding: .3rem .2rem;
+}
+.P2PopUpBox .keyContent .contentLi {
+  height: 1.4rem!important;
+  line-height: 1.4rem;
+  padding-left: 0;
+  padding-right: 0;
+}
 .P2PopUpBox .splitLineBox {
   padding: 0 .8rem;
 }
@@ -154,13 +152,9 @@ html {
   height: .5rem;
   right: 1.75rem;
   top: 1.6rem;
-  background: url(../img/off.png) no-repeat;
+  background: url(../images/off.png) no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
-}
-.PopUpContent {
-  background: url(../img/popup3_middle.png) repeat-y;
-  background-size: 100% .125rem;
 }
 .PopUpContent .PaddingContent {
   padding-top: .33rem;
@@ -254,8 +248,6 @@ html {
 .PopUpBottom {
   margin-top: -2px;
   height: 3.4rem;
-  background: url(../img/popup3_bottom.png) no-repeat;
-  background-size: 100% 100%;
 }
 .PopUpBottom .PaddingContent {
   padding-top: .13rem;
