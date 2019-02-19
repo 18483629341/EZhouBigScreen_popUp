@@ -7,29 +7,43 @@
 @TwoLevelC: #0067ff;
 @ThreeLevelC: #00ff00;
 @FourLevelC: #ffff00;
-@FiveLevelC: #ffd700;
+@FiveLevelC: hsl(9, 98%, 51%);
 @SixLevelC: #fc0105;
+@radiusWidth:8px;
 #tabs(){
 	.tabsList{
 		width:375px;
 		height: 36px;
-		color:#fff;
-		border:1px solid @borderGrey; 
-		border-radius:3px;
+		text-align: center;
+		//margin-bottom: 5px;
 	}
 	.tabli{
-	    flex:1;
+		color:#fff;
 		background:#080b2f;
+		border-top:1px solid @borderGrey;
+		border-bottom:1px solid @borderGrey;
 	}
-	.tabli.active{
+	.tabliFirstchild{
+		border:1px solid @borderGrey;
+		border-right:none; 
+		border-radius:@radiusWidth 0 0 @radiusWidth;
+	}
+	.selfTabLastChild{
+		border:1px solid @borderGrey;
+		border-radius:0 @radiusWidth @radiusWidth 0;
+	}
+	.tabliActive{
 		background:#00ccff;
 	}
-	.tabli+.tabli{
+	.tabliTotabli{
 		border-left:1px solid @borderGrey; 
 	}
 }
 html{
 	font-size: 40px !important;
+}
+li{
+	list-style: none;
 }
 .flexBlock{
 	display: flex;
@@ -70,7 +84,7 @@ html{
 	overflow: hidden;
 	background:#080b2f;
 	border:1px solid #797979;
-	padding:0 8px 10px 0;
+	padding:10px;
 }
 .PopUpBox.show{
     display:block;
@@ -93,15 +107,14 @@ html{
 		position: absolute;
 		width: .5rem;
 		height: .5rem;
-		right: 14px;
-		top: 23px;
+		right: 19px;
+    	top: 21px;
         background: url(../images/off.png) no-repeat;
 		background-size: 100% 100%;
 		cursor: pointer;
 	}
 }
 .PopUpContent{
-    
 	.PaddingContent{
 		padding-top:7px;
 		text-align: left;
@@ -112,29 +125,63 @@ html{
 
 	}
 }
-
 .keyContent{
 	.contentList{
 		.contentLi{
+			font-weight: 700;
 			text-align: left;
-			line-height: 56px;
+			line-height: 50px;
 			font-size:20px;
 			color:@FontBlue;
 		}
 	}
 }
-
-
+.tab-content{
+	//border: 1px solid red;
+	border-top:4px solid @borderSliver;
+	padding:12px 20px 20px 20px;
+	width:770px;
+	height: 414px;
+    
+}
+.waterImg{
+	width: 72px;
+	height: 72px;
+	margin-top:37px;
+	background: url(../images/u139.png) no-repeat;
+	background-size:100% 100%; 
+}
+.videoDiv{
+	position: relative;
+}
+.controlDiv{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width:90px;
+	height: 90px;
+	transform: translate(-50%,-50%);
+	background: rgba(105, 105, 105, 0.3);
+	border-radius: 50%;
+	.controlIcon{
+		display: block;
+		width:64px;
+		height: 64px;
+		margin: 13px;
+		background: url('../images/uplay.png');
+	}
+	.controlIcon.pause{
+		background: url('../images/upause.png');
+	}
+}
 
 .popUpcanvasBox{
-	width: 22.7rem;
-	height:10rem;
-	margin-top: -.5rem;
+	border:1px solid yellow; 
+	width:100%;
+	height:326px;	
 }
 .Popuplegend{
 	text-align: center;
-	
-	//margin-bottom: .53rem;
 	.OneLevel{
        background:#fbe83a;
 	}
@@ -157,83 +204,165 @@ html{
 		text-align: right;
 	}
 }
+.selfTabs{
+    margin:0 0 7px 0;
+	#tabs.tabsList();
+	.selfTab{
+		#tabs.tabli();
+		flex:1;
+	}
+	.selfTab:first-child{
+		#tabs.tabliFirstchild();	
+	}
+	.selfTab:last-child{
+		#tabs.selfTabLastChild();
+	}
+	.selfTab.active{
+		#tabs.tabliActive();
+	}
+	.selfTab+.selfTab{
+		#tabs.tabliTotabli();
+	}
+}
 .canvasTab{
-	height: 2.68rem;
-	margin-top:.6rem;
-	display: inline-block;
-	.tabSpan{
-		padding: 0 0.68rem;
-		font-size: .75rem;
-		display: inline-block;
-		background: #273b5b;
-		color: #cedffe;
-		border-radius: 3px;
-		cursor: pointer;
-		height: 1.63rem;
-		line-height: 1.63rem;
+	#tabs.tabsList();
+	@smallradiusWidth:7px;
+	width: 490px;
+	height: 32px;
+	.tabLi{
+		#tabs.tabli();
 	}
-
-	.tabSpan+.tabSpan{
-		margin-left:.5rem;
+	.tabLi:first-child{
+		#tabs.tabliFirstchild();
+		border-radius:@smallradiusWidth 0 0 @smallradiusWidth;	
 	}
-	.tabSpan.active{
-		background: #00e5ff;
-		color: #0f0920;
+	.tabLi:last-child{
+		#tabs.selfTabLastChild();
+		border-radius:0 @smallradiusWidth @smallradiusWidth 0;
 	}
+	.tabLi.active{
+		#tabs.tabliActive();
+	}
+	.tabLi+.tabLi{
+		#tabs.tabliTotabli();
+	}
+	.longerText{
+		width:100px;
+	}
+}
+.tab-pane{
+	display: none;
+}
+.tab-pane.active{
+	display: block;
 }
 .canvasTab.alignRight{
 	float: right;
 	margin-top:.4rem;
 	height: 1.6rem;
 }
+.updateTime{
+	font-size: 14px;
+	line-height: 40px;
+	height:40px;
+	text-align: right;
+	color:#fff; 
+}
+.carousel{
+	width:100%;
+	height:100%;
+	.item>img{
+		width:100%;
+	    height:100%;
+	}
+	.arrowIcon{
+		display: inline-block;
+		width: 20px;
+		height:65px;
+		margin-top: 166px;
+	}
+	.leftIcon{
+        background: url('../images/u84.png') no-repeat;
+	}
+	.rightIcon{
+        background: url('../images/u89.png') no-repeat;
+	}
+}
 .levelBox{
 	width:200px;
 	height:100%;
 	.insideBox{
+		margin: 0;
 		width: 150px;
 		height:150px;
 		border-radius:50%; 
 	}
+	.waterIcon{
+        
+	}
 	.levelText{
+		width: 150px;
 		margin:10px 0;
-		font-size: 20px;
+		font-size: 22px;
+	    font-weight: 900;
 		line-height: 26px;
 		text-align: center;
 	}
  }
- .insideBox.oneLevel{
-	border:1px solid @OneLevelC;
+ @insideBorderWidth:4px;
+ .levelBox.oneLevel{
+	.insideBox{
+		border:@insideBorderWidth solid @OneLevelC;
+	}
 	.levelText{
 		color:@OneLevelC;
 	}
 }
-.insideBox.twoLevel{
-	border:1px solid @TwoLevelC;
+.levelBox.twoLevel{
+	.insideBox{
+		border:@insideBorderWidth solid @TwoLevelC;
+	}
 	.levelText{
 		color:@TwoLevelC;
 	}
 }
-.insideBox.threeLevel{
-	border:1px solid @ThreeLevelC;
+.levelBox.threeLevel{
+	.insideBox{
+		border:@insideBorderWidth solid @ThreeLevelC;
+	}
 	.levelText{
 		color:@ThreeLevelC;
 	}
 }
-.insideBox.fourLevel{
-	border:1px solid @FourLevelC;
+.levelBox.fourLevel{
+	.insideBox{
+		border:@insideBorderWidth solid @FourLevelC;
+	}
 	.levelText{
 		color:@FourLevelC;
 	}
 }
-.insideBox.fiveLevel{
-	border:1px solid @FiveLevelC;
+.levelBox.fiveLevel{
+	.insideBox{
+		border:@insideBorderWidth solid @FiveLevelC;
+	}
 	.levelText{
 		color:@FiveLevelC;
 	}
 }
-.insideBox.sixLevel{
-	border:1px solid @SixLevelC;
+.levelBox.sixLevel{
+	.insideBox{
+		border:@insideBorderWidth solid @SixLevelC;
+	}
 	.levelText{
 		color:@SixLevelC;
+	}
+}
+/*     某些弹窗的单独设置  */
+.PopUpBox_pol{
+	.contentList{
+		.contentLi{
+			line-height: 56px;
+		}
 	}
 }

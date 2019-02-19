@@ -1,6 +1,9 @@
 html {
   font-size: 40px !important;
 }
+li {
+  list-style: none;
+}
 .flexBlock {
   display: flex;
   display: -webkit-box;
@@ -39,7 +42,7 @@ html {
   overflow: hidden;
   background: #080b2f;
   border: 1px solid #797979;
-  padding: 0 8px 10px 0;
+  padding: 10px;
 }
 .PopUpBox.show {
   display: block;
@@ -63,8 +66,8 @@ html {
   position: absolute;
   width: .5rem;
   height: .5rem;
-  right: 14px;
-  top: 23px;
+  right: 19px;
+  top: 21px;
   background: url(../images/off.png) no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
@@ -78,15 +81,52 @@ html {
   padding: 7px 36px 10px 36px;
 }
 .keyContent .contentList .contentLi {
+  font-weight: 700;
   text-align: left;
-  line-height: 56px;
+  line-height: 50px;
   font-size: 20px;
   color: #00ccff;
 }
+.tab-content {
+  border-top: 4px solid #ccc;
+  padding: 12px 20px 20px 20px;
+  width: 770px;
+  height: 414px;
+}
+.waterImg {
+  width: 72px;
+  height: 72px;
+  margin-top: 37px;
+  background: url(../images/u139.png) no-repeat;
+  background-size: 100% 100%;
+}
+.videoDiv {
+  position: relative;
+}
+.controlDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  background: rgba(105, 105, 105, 0.3);
+  border-radius: 50%;
+}
+.controlDiv .controlIcon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 13px;
+  background: url('../images/uplay.png');
+}
+.controlDiv .controlIcon.pause {
+  background: url('../images/upause.png');
+}
 .popUpcanvasBox {
-  width: 22.7rem;
-  height: 10rem;
-  margin-top: -0.5rem;
+  border: 1px solid yellow;
+  width: 100%;
+  height: 326px;
 }
 .Popuplegend {
   text-align: center;
@@ -112,82 +152,160 @@ html {
   color: #10ecff;
   text-align: right;
 }
+.selfTabs {
+  margin: 0 0 7px 0;
+  width: 375px;
+  height: 36px;
+  text-align: center;
+}
+.selfTabs .selfTab {
+  color: #fff;
+  background: #080b2f;
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
+  flex: 1;
+}
+.selfTabs .selfTab:first-child {
+  border: 1px solid #797979;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+.selfTabs .selfTab:last-child {
+  border: 1px solid #797979;
+  border-radius: 0 8px 8px 0;
+}
+.selfTabs .selfTab.active {
+  background: #00ccff;
+}
+.selfTabs .selfTab + .selfTab {
+  border-left: 1px solid #797979;
+}
 .canvasTab {
-  height: 2.68rem;
-  margin-top: .6rem;
-  display: inline-block;
+  width: 375px;
+  height: 36px;
+  text-align: center;
+  width: 490px;
+  height: 32px;
 }
-.canvasTab .tabSpan {
-  padding: 0 0.68rem;
-  font-size: .75rem;
-  display: inline-block;
-  background: #273b5b;
-  color: #cedffe;
-  border-radius: 3px;
-  cursor: pointer;
-  height: 1.63rem;
-  line-height: 1.63rem;
+.canvasTab .tabLi {
+  color: #fff;
+  background: #080b2f;
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
 }
-.canvasTab .tabSpan + .tabSpan {
-  margin-left: .5rem;
+.canvasTab .tabLi:first-child {
+  border: 1px solid #797979;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  border-radius: 7px 0 0 7px;
 }
-.canvasTab .tabSpan.active {
-  background: #00e5ff;
-  color: #0f0920;
+.canvasTab .tabLi:last-child {
+  border: 1px solid #797979;
+  border-radius: 0 8px 8px 0;
+  border-radius: 0 7px 7px 0;
+}
+.canvasTab .tabLi.active {
+  background: #00ccff;
+}
+.canvasTab .tabLi + .tabLi {
+  border-left: 1px solid #797979;
+}
+.canvasTab .longerText {
+  width: 100px;
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
 }
 .canvasTab.alignRight {
   float: right;
   margin-top: .4rem;
   height: 1.6rem;
 }
+.updateTime {
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  text-align: right;
+  color: #fff;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+.carousel .item > img {
+  width: 100%;
+  height: 100%;
+}
+.carousel .arrowIcon {
+  display: inline-block;
+  width: 20px;
+  height: 65px;
+  margin-top: 166px;
+}
+.carousel .leftIcon {
+  background: url('../images/u84.png') no-repeat;
+}
+.carousel .rightIcon {
+  background: url('../images/u89.png') no-repeat;
+}
 .levelBox {
   width: 200px;
   height: 100%;
 }
 .levelBox .insideBox {
+  margin: 0;
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
 .levelBox .levelText {
+  width: 150px;
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 900;
   line-height: 26px;
   text-align: center;
 }
-.insideBox.oneLevel {
-  border: 1px solid #4ea9ff;
+.levelBox.oneLevel .insideBox {
+  border: 4px solid #4ea9ff;
 }
-.insideBox.oneLevel .levelText {
+.levelBox.oneLevel .levelText {
   color: #4ea9ff;
 }
-.insideBox.twoLevel {
-  border: 1px solid #0067ff;
+.levelBox.twoLevel .insideBox {
+  border: 4px solid #0067ff;
 }
-.insideBox.twoLevel .levelText {
+.levelBox.twoLevel .levelText {
   color: #0067ff;
 }
-.insideBox.threeLevel {
-  border: 1px solid #00ff00;
+.levelBox.threeLevel .insideBox {
+  border: 4px solid #00ff00;
 }
-.insideBox.threeLevel .levelText {
+.levelBox.threeLevel .levelText {
   color: #00ff00;
 }
-.insideBox.fourLevel {
-  border: 1px solid #ffff00;
+.levelBox.fourLevel .insideBox {
+  border: 4px solid #ffff00;
 }
-.insideBox.fourLevel .levelText {
+.levelBox.fourLevel .levelText {
   color: #ffff00;
 }
-.insideBox.fiveLevel {
-  border: 1px solid #ffd700;
+.levelBox.fiveLevel .insideBox {
+  border: 4px solid #fd2c08;
 }
-.insideBox.fiveLevel .levelText {
-  color: #ffd700;
+.levelBox.fiveLevel .levelText {
+  color: #fd2c08;
 }
-.insideBox.sixLevel {
-  border: 1px solid #fc0105;
+.levelBox.sixLevel .insideBox {
+  border: 4px solid #fc0105;
 }
-.insideBox.sixLevel .levelText {
+.levelBox.sixLevel .levelText {
   color: #fc0105;
+}
+/*     某些弹窗的单独设置  */
+.PopUpBox_pol .contentList .contentLi {
+  line-height: 56px;
 }

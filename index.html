@@ -616,10 +616,11 @@
             <div class="PopUpContent">
                 <div class="PaddingContent">
                     <div class="flexBlock levelContainer">
-                        <div class="  levelBox ">
+                        <div class="  levelBox fiveLevel">
                             <!-- 根据等级样式为 Ⅰ类对应样式为 oneLevel twoLevel  ...-->
-                            <div class="insideBox sixLevel">
-                                <div class="waterIcon"></div>
+                            <div class="insideBox ">
+                                <div class="waterImg"></div>
+
                             </div>
                             <div class="levelText">劣Ⅴ类</div>
                             <!-- Ⅰ Ⅱ Ⅲ Ⅵ Ⅴ Ⅳ -->
@@ -649,25 +650,26 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="nav nav-pills selfTabs flexBlock" role="tablist">
-                        <li role="presentation" class="selfTab active">
-                            <a href="#sha_data" role="tab" data-toggle="tab">监测数据</a>
-                        </li>
-                        <li role="presentation" class="selfTab ">
-                            <a href="#sha_photo" role="tab" data-toggle="tab">现场照片</a>
-                        </li>
-                        <li role="presentation" class="selfTab ">
-                            <a href="#sha_video" role="tab" data-toggle="tab">现场视频</a>
-                        </li>
+                    <ul class="selfTabs flexBlock" role="tablist">
+                        <li class="selfTab active" data-content="sha_data">监测数据</li>
+                        <li class="selfTab " data-content="sha_photo">现场照片</li>
+                        <li class="selfTab " data-content="sha_video">现场视频</li>
                     </ul>
                     <div class="tab-content">
-                        <div role="tabpanel " class="tab-pane RightTableDiv active" id="sha_data">
-                            <div class="canvasTab">
-                                <span class="tabSpan active" data-name="goodWeather">氨氮</span>
-                                <span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
-                                <span class="tabSpan " data-name="pm2.5">总磷</span>
+                        <!-- 监测数据  start -->
+                        <div class="tab-pane active" id="sha_data">
+                            <ul class="canvasTab flexBlock">
+                                <li class="tabLi flex1 active" data-name="waterAssement">水质评价</li>
+                                <li class="tabLi flex1" data-name="NitrogenHigh">氨氮</li>
+                                <li class="tabLi longerText" data-name="ManganateIndex ">高锰酸钾指数</li>
+                                <li class="tabLi longerText" data-name="ChemicalOxyDemand">化学需氧量</li>
+                                <li class="tabLi flex1" data-name="DissolvedOxygen">溶解氧</li>
+                                <li class="tabLi flex1" data-name="TotalPhosphorus">总磷</li>
+                            </ul>
+                            <div class="updateTime">更新时间:
+                                <span>2018-12</span>
                             </div>
-                            <div class="popUpcanvasBox" id="P2jingCanvas">
+                            <div class="popUpcanvasBox" id="ShaCanvas">
                             </div>
                             <div class="legend2 Popuplegend">
                                 <ol class="LegendList">
@@ -686,26 +688,87 @@
                                 </ol>
                             </div>
                         </div>
-                        <div role="tabpanel " class="tab-pane RightTableDiv active" id="sha_photo">
-                            2
+                        <!-- 监测数据  end -->
+                        <!-- 现场照片  start -->
+                        <div class="tab-pane" id="sha_photo">
+                            <div id="carousel01" class=" carousel slide carousel01" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators SelfIndicators">
+                                    <li data-target="#carousel01" data-slide-to="0" class="circle active"></li>
+                                    <li data-target="#carousel01" data-slide-to="1" class="circle"></li>
+                                    <li data-target="#carousel01" data-slide-to="2" class="circle"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img class="img-responsive" src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption active">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-10-11</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-11-12</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-11-13</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="arrowIcon leftIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="arrowIcon rightIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                            </div>
                         </div>
-                        <div role="tabpanel " class="tab-pane RightTableDiv active" id="sha_video">
-                            3
+                        <!-- 现场照片  end -->
+                        <!-- 现场视频  start -->
+                        <div class="tab-pane " id="sha_video">
+                            <div class="videoDiv"  style="width: 100%; height: 100%;">
+                                <video id="video1" class="video" width="100%" height="100%"  poster="./images/u75.jpg"
+                                webkit-playsinline="true" playsinline="true" type="video/mp4" 
+                                preload="" x5-video-player-type="h5" src="./images/jebsen.mp4" >
+                                   
+                                </video>
+                                <div class="controlDiv">
+                                    <span class="controlIcon pause"></span>
+                                </div>
+                            </div>
                         </div>
+                        <!-- 现场视频  end -->
                     </div>
 
                 </div>
             </div>
-            
+
         </div>
         <!-- 弹窗1 纱帽 end -->
     </div>
     <script src="./script/jquery-3.2.1.js"></script>
-    <script src="./script/bootstrap.js"></script>
+
     <script src="./script/canvas-bg.js"></script>
     <script src="./script/echarts.min.js"></script>
     <script src="./script/gasWater.js"></script>
-
+    <script src="./script/bootstrap.js"></script>
+    <script src="./script/popupMain.js"></script>
+    <script src="./script/popup.js"></script>
 </body>
 
 </html>
