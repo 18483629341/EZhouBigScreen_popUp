@@ -1,0 +1,1178 @@
+.wrap {
+    width: 11520px;
+    height: 2160px;
+    background-image: url("../images/bg.png");
+    overflow: hidden;
+}
+
+.wrap .wrap-one,
+.wrap .wrap-two {
+    float: left;
+}
+
+/*左边页面-start*/
+
+.wrap .wrap-one {
+    width: 3840px;
+    height: 2160px;
+    background: url("../images/5.png") no-repeat center top;
+    position: relative;
+    padding: 0 20px 0 40px;
+}
+
+.wrap .wrap-one img {
+    /* position: absolute; */
+}
+
+.wrap .wrap-one .slide1 {
+    top: 398px;
+    left: 5px;
+}
+
+.wrap .wrap-one .slide2 {
+    top: 796px;
+    left: 948px;
+}
+
+.wrap .program {
+    margin-left: 8px;
+}
+
+.wrap .program1 {
+    margin-left: 8px;
+}
+
+.wrap .wrap-one .one {
+    width: 1616px;
+    width: 44.1%;
+    /* height: 1030px; */
+    float: left;
+    margin: 202px 0 0;
+}
+
+.wrap .wrap-one .one .one-top {
+    background: url("../images/left-main1_03.png") no-repeat;
+    background-size: 100% 100%;
+    height: 600px;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+/*空气质量实况 start*/
+
+.wrap .wrap-one .one .one-top .one-inner .oneinnertit {
+    overflow: hidden;
+    height: 148px;
+}
+
+.oneinnertit dt {
+    float: left;
+    font-size: 55px;
+    color: #fff;
+    line-height: 148px;
+}
+
+.oneinnertit dd {
+    float: right;
+}
+
+.oneinnertit dd p {
+    float: left;
+    line-height: 55px;
+}
+
+.oneinnertit dd p.num {
+    font-size: 66px;
+    color: #fff;
+    line-height: 148px;
+    margin-right: 25px;
+}
+
+.oneinnertit dd p .show1 {
+    color: #afccfc;
+    font-size: 32px;
+    display: block;
+    margin: 7px 0;
+}
+
+.oneinnertit dd p .show2 {
+    color: #fff;
+    font-size: 34px;
+    display: block;
+    width: 220px;
+    text-align: center;
+    border-radius: 30px;
+    height: 55px;
+}
+
+.wrap .wrap-one .one .one-top .one-inner {
+    overflow: hidden;
+    margin: 0 30px;
+}
+
+.wrap .wrap-one .one .one-top .one-inner .oneinnerleft {
+    float: left;
+}
+
+.wrap .wrap-one .one .one-top .one-inner ul li {
+    color: #afccfc;
+    font-size: 30px;
+    line-height: 58px;
+}
+
+.wrap .wrap-one .one .one-top .one-inner .oneinnerright {
+    float: right;
+}
+
+/* .wrap .wrap-one .one .one-top .one-inner .show1 {
+    float: left;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.wrap .wrap-one .one .one-top .one-inner .show2 {
+    float: left;
+    width: 74px;
+    height: 24px;
+    background-color: #fec43a;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 24px;
+    margin: 16px 0 0 10px;
+    color: #ffffff;
+} */
+
+.ybtitle {
+    clear: both;
+    color: #11b6d9;
+    font-size: 26px;
+    line-height: 85px;
+    overflow: hidden;
+    height: 70px;
+}
+
+.oneinneryb {
+    clear: both;
+}
+
+.oneinneryb li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    line-height: 46px !important;
+}
+
+.oneinneryb li p.poll2 {
+    color: #fff;
+}
+
+/*空气质量实况 end*/
+
+.wrap .title {
+    margin: 0 27px;
+    height: 102px;
+    line-height: 102px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap .title::before {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 88px;
+    left: 0;
+    bottom: 0;
+    height: 6px;
+    background: #202e4d;
+}
+
+.wrap .title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 0px;
+    width: 88px;
+    bottom: 0;
+    height: 6px;
+    background: url("../images/8.png") repeat-x;
+}
+
+.wrap .title1 {
+    float: left;
+    font-size: 36px;
+    font-weight: bold;
+    color: #11b6d9;
+    border-bottom: 6px solid #11b6d9;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.wrap .title2 {
+    float: right;
+    font-size: 32px;
+    color: #627ead;
+}
+
+.wrap .div-title2 {
+    text-align: center;
+    height: 80px;
+    line-height: 90px;
+}
+
+.wrap .div-title2 span {
+    cursor: pointer;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.wrap .div-title2 .tabwater {
+    color: #11B6D9 !important;
+}
+
+/*空气质量优良率 start*/
+
+.wrap .wrap-one .one .one-bottom {
+    background: url("../images/left-main2_06.png") no-repeat;
+    background-size: 100% 100%;
+    height: 600px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.wrap .wrap-one .one .one-bottom .onebottom {
+    margin-top: 25px;
+}
+
+.onebottom-list {
+    clear: both;
+    margin: 0 30px;
+    height: 105px;
+}
+
+.onebottom-list p.name {
+    font-size: 24px;
+    color: #fff;
+    float: left;
+    width: 210px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.onebottom-list div.bar-box {
+    float: left;
+    width: 84%;
+}
+
+.onebottom-list div.bar-box .num {
+    color: #00de1d;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+
+.onebottom-list div.bar-box .bar-silder {
+    width: 100%;
+    height: 26px;
+    background: #f5f9ff;
+    border-radius: 15px;
+    position: relative;
+}
+
+.onebottom-list div.bar-box .bar-silder .color {
+    height: 26px;
+    background: #00de1d;
+    border-radius: 15px;
+    float: left;
+}
+
+.onebottom-list div.bar-box .bar-silder .old {
+    position: absolute;
+    top: -17px;
+    margin-left: -6px;
+    width: 12px;
+    height: 60px;
+    background: url(../images/10.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.onebottom-list div.bar-box .bar-silder .new {
+    position: absolute;
+    top: -10px;
+    margin-left: -6px;
+    width: 9px;
+    height: 47px;
+    background: url(../images/11.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*空气质量优良率 end*/
+
+/*地图 start*/
+
+.wrap .wrap-one .two {
+    float: left;
+    width: 2032px;
+    width: 55%;
+    height: 1030px;
+    background: url("../images/left-map_05.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 202px 0 24px 20px;
+}
+
+.wrap .title-map {
+    overflow: hidden;
+}
+
+.wrap .title-map .title-inner {
+    height: 72px;
+    background-repeat: no-repeat;
+    margin: 30px 0 0 20px;
+}
+
+.wrap .title-map .title-inner span {
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1199ce;
+    line-height: 35px;
+    /* width: 89px; */
+    padding: 0 30px;
+    height: 72px;
+    line-height: 72px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background: url(../images/12.png) no-repeat left center;
+    background-size: 100% 100%;
+}
+
+.wrap .title-map .title-inner span.block1 {
+    background: url(../images/13.png) no-repeat left center;
+    color: #00d2ff !important;
+    background-size: 100% 100%;
+}
+
+.wrap .map-box {
+    width: 100%;
+    height: 920px;
+    position: relative;
+}
+
+.map-box .search {
+    position: absolute;
+    left: 24px;
+    top: 10px;
+    z-index: 3;
+    border: 2px solid #476fb1;
+    text-align: center;
+    width: 180px;
+    background: rgba(5, 14, 40, .8);
+    display: block;
+}
+
+.map-box .search p {
+    color: #fff;
+    line-height: 45px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 22px;
+}
+
+.map-box .search p.active {
+    background: rgba(31, 53, 97, 1);
+    color: #00d2ff;
+}
+
+/*地图end*/
+
+/*全市优良天数 start*/
+
+.wrap .wrap-one .three {
+    width: 1616px;
+    width: 100%;
+    height: 612px;
+    background: url("../images/left-main3_06.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+
+.wrap .wrap-one .three .rank {
+    height: 420px;
+    margin: 0px 20px 0;
+}
+
+.wrap .wrap-one .three .rank li {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.wrap .wrap-one .three .rank li .city-name {
+    float: left;
+    font-size: 28px;
+    color: #fff;
+    width: 13%;
+    overflow: hidden;
+    height: 34px;
+}
+
+.wrap .wrap-one .three .rank li .city-silder {
+    float: left;
+    width: 78%;
+    height: 26px;
+    background: #2a3c5d;
+    border-radius: 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.wrap .wrap-one .three .rank li .city-silder .color {
+    height: 26px;
+    background: #74aaf2;
+    border-radius: 15px;
+    float: left;
+}
+
+.wrap .wrap-one .three .rank li .city-silder .old {
+    position: absolute;
+    top: -17px;
+    margin-left: -6px;
+    width: 12px;
+    height: 60px;
+    background: url("../images/10.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.wrap .wrap-one .three .rank li .city-num {
+    float: left;
+    color: #11b6d9;
+    font-size: 28px;
+    width: 7%;
+    text-align: right;
+}
+
+/*全市优良天数 end*/
+
+/*全年天气变化 start*/
+
+.wrap .wrap-one .four {
+    width: 2032px;
+    width: 55%;
+    height: 804px;
+    background: url("../images/left-main4_10.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    float: left;
+}
+
+.wrap .wrap-one .four .change {
+    width: 100%;
+    height: 693px;
+}
+
+/*全年天气变化 end*/
+
+/*左边页面结束-end*/
+
+/*中间和右边页面开始*/
+
+.wrap .wrap-two {
+    width: 3840px;
+    height: 2160px;
+    background: url("../images/6.png") no-repeat center top;
+    position: relative;
+    padding: 0 20px;
+}
+
+.wrap .wrap-three {
+    padding: 0 40px 0 0px;
+    background: url("../images/7.png") no-repeat center top;
+}
+
+
+.wrap .wrap-two .slide1 {
+    top: 398px;
+    left: -2px;
+}
+
+.wrap .wrap-two .slide2 {
+    top: 796px;
+    left: 940px;
+}
+
+.wrap .top {
+    height: 1030px;
+    overflow: hidden;
+    margin: 202px 0px 24px;
+}
+
+.wrap .wrap-two .top .top-left {
+    width: 1616px;
+    width: 44.1%;
+    height: 1031px;
+    float: left;
+}
+
+.wrap .wrap-two .top .top-left .top-left2 {
+    height: 678px;
+    background: url("../images/right_08.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*地图 start*/
+
+.wrap .wrap-two .top .top-right {
+    width: 2032px;
+    width: 55%;
+    height: 1031px;
+    background: url("../images/right_05.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-left: 20px;
+}
+
+.wrap .wrap-two .top .top-right .wraptwomap {
+    width: 484px;
+    height: 466px;
+    margin: 0 12px;
+    position: relative;
+}
+
+.wrap .wrap-two .top .top-right .toprighttil {
+    width: 484px;
+    height: 36px;
+    margin: 12px auto 0 auto;
+}
+
+.wrap .wrap-two .top .top-right .toprighttil span {
+    font-size: 14px;
+    color: #749BDB;
+    text-align: center;
+    display: block;
+    float: left;
+    height: 36px;
+    width: 89px;
+    line-height: 36px;
+    background-image: url(../images/box1_off.png);
+}
+
+.wrap .wrap-two .top .top-right .toprighttil span:hover {
+    cursor: pointer;
+}
+
+/*地图end*/
+
+.wrap .bottom {
+    height: 804px;
+    overflow: hidden;
+    margin: 0 0px;
+}
+
+/*断面分布start*/
+
+.wrap .wrap-two .bottom .bottom-left {
+    width: 1616px;
+    width: 44.1%;
+    height: 804px;
+    float: left;
+    margin-right: 20px;
+    background: url("../images/right_11.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft {
+    width: 100%;
+    height: 693px;
+}
+
+.twobottomleft-one .mybox {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 0;
+    right: 0;
+    top: 15px;
+    bottom: 0;
+    margin: auto;
+}
+
+.twobottomleft-one .circle2 {
+    position: absolute;
+    width: 420px;
+    /* height: 211px; */
+    left: 0;
+    right: 0;
+    top: 46px;
+    bottom: 0;
+    margin: auto;
+}
+
+#box2 {
+    width: 100%;
+    height: 100%;
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mybox .time {
+    font-size: 58px;
+    color: #11b6d9;
+    position: absolute;
+    top: 107px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.mybox .title {
+    color: #fff;
+    position: absolute;
+    top: 147px;
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.mybox .title::before,
+.mybox .title::after {
+    display: none;
+}
+
+#box1 {
+    height: 150px;
+    padding-top: 30px;
+}
+
+.box1-title {
+    color: #fff;
+    font-size: 26px;
+    height: 40px;
+    line-height: 63px;
+    margin: 10px 35px;
+}
+
+.box1-title span {
+    margin-right: 20px;
+}
+
+.box1-title img {
+    height: 40px;
+    vertical-align: -10px;
+    margin-right: 10px;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft {
+    position: relative;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-one {
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-two {
+    position: absolute;
+    bottom: 40px;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-two div {
+    width: 18%;
+    float: left;
+    margin: 0 8%;
+    white-space: nowrap;
+    border-bottom: 8px solid #fecb17;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-two div:first-child {
+    border-color: #00a07e;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-two div:last-child {
+    margin-right: 0;
+    border-color: #fe0302;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-two span {
+    font-size: 50px;
+    color: #afccfc;
+}
+
+.wrap .wrap-two .bottom .bottom-left .twobottomleft .twobottomleft-two p {
+    font-size: 30px;
+    color: #afccfc;
+    margin: 18px 0 10px;
+}
+
+/*断面分布 end*/
+
+/*变化率 start*/
+
+.wrap .wrap-two .bottom .bottom-right {
+    width: 2032px;
+    width: 55%;
+    height: 804px;
+    float: left;
+    background: url("../images/right_13.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.wrap .wrap-two .bottom .bottom-right .gradient {
+    width: 100%;
+    height: 693px;
+}
+
+.wrap .wrap-three .bottom .bottom-right .gradient {
+    width: 100%;
+    height: 508px;
+}
+
+/*变化率end*/
+
+/*水质环境监测 start*/
+
+.wrap .wrap-two .top .top-left .top-left1 {
+    height: 330px;
+    background: url("../images/right_03.png") no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 20px;
+}
+
+.wrap .wrap-two .left1inner1 {
+    border-right: 1px solid #273659;
+}
+
+.wrap .wrap-two .left1inner1,
+.wrap .wrap-two .left1inner2 {
+    float: left;
+    width: 50%;
+    height: 220px;
+    box-sizing: border-box;
+}
+
+.wrap .wrap-two .top-left1 .left1inner1,
+.wrap .wrap-two .top-left1 .left1inner2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.wrap .wrap-two .top-left1 .left1inner1 h1 {
+    font-size: 73px;
+    color: #ffffff;
+    height: 130px;
+    line-height: 120px;
+}
+
+.wrap .wrap-two .top-left1 .left1inner1 span {
+    font-size: 30px;
+    color: #afccfc;
+}
+
+.wrap .wrap-two .top-left1 .left1inner2 span {
+    width: 100%;
+    display: block;
+    font-size: 28px;
+    color: #afccfc;
+    line-height: 58px;
+}
+
+/*水质环境监测 end*/
+
+/*水质达标情况 start*/
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2one {
+    width: 100%;
+    height: 381px;
+    margin: 0 auto;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two {
+    background-image: url(../images/twobottomleft_11.png);
+    width: 800px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    background-size: 100% 100%;
+    margin: 20px auto 0;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .topleft2twol {
+    float: left;
+    width: 25%;
+    line-height: 100px;
+    font-size: 42px;
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .topleft2twor {
+    float: left;
+    width: 23%;
+    font-size: 16px;
+    color: #afccfc;
+    position: absolute;
+    top: 0px;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .part1 {
+    left: 0px;
+    text-align: center;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .part2 {
+    left: 25%;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .part3 {
+    left: 51.5%;
+    text-align: center;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .part4 {
+    left: 77%;
+}
+
+.wrap .wrap-two .top-left2 .topleft2 .topleft2two .topleft2twor h5 {
+    font-weight: normal;
+    line-height: 100px;
+    font-size: 25px;
+}
+
+.topleft2 {
+    position: absolute;
+    width: 100%;
+}
+
+.box5-num {
+    position: absolute;
+    top: 146px;
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    width: 100%;
+}
+
+.box5-title {
+    font-size: 32px;
+    color: #afccfc;
+    position: absolute;
+    top: 207px;
+    text-align: center;
+    width: 100%;
+}
+
+/*水质达标情况 end*/
+
+/*右边页面结束*/
+
+#box3 {
+    position: relative;
+    overflow: hidden;
+}
+
+#box3 ul {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+#box3 ul li {
+    height: 85px;
+}
+
+/*水质达标情况 start*/
+
+.wrap-three .tab2 {
+    width: 100%;
+}
+
+.wrap-three .tab2 thead th {
+    width: 100px;
+    text-align: center;
+    height: 80px;
+    font-size: 32px;
+    color: #11b6d9;
+}
+
+.wrap-three .topleft2 {
+    width: 100%;
+    height: 481px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap-three .topleft2 .tabbody {
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+
+.wrap-three .topleft2 .tabbody tr {
+    display: block;
+    /* height: 40px; */
+    width: 100%;
+    text-align: center;
+}
+
+.wrap-three .topleft2 .tabbody tr td {
+    width: 552px;
+    font-size: 32px;
+    color: #afccfc;
+    height: 74px;
+}
+
+.wrap-three .tab1 {
+    width: 482px;
+    height: 34px;
+    text-align: center;
+    color: #11b6d9;
+    margin-left: 12px;
+}
+
+.wrap-three .topleft3 {
+    width: 482px;
+    height: 250px;
+    text-align: left;
+    color: #afccfc;
+    margin-left: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap-three .topleft3 .tabbody {
+    position: absolute;
+    display: block;
+}
+
+.wrap-three .topleft3 .tabbody tr {
+    height: 34px;
+    width: 100%;
+}
+
+.wrap-three .topleft3 .tabbody tr td {
+    width: 60px;
+    text-align: center;
+}
+
+.wrap-three .topleft3 .tabbody tr td:first-child {
+    width: 80px;
+    text-align: left;
+}
+
+.wrap-three .topleft3 .tabbody tr td:nth-child(2) {
+    text-align: left;
+}
+
+.wrap-three .bottom .bottom-left .twobottomleft {
+    width: 380px;
+    height: 360px;
+    margin: 0 12px;
+    position: relative;
+}
+
+.wrap-three .bottom .bottom-left .tabwater {
+    color: #11B6D9 !important;
+}
+
+.wrap-three .bottom .bottom-left .twobottomleft {
+    height: 568px !important;
+    margin: 0;
+}
+
+.wrap-three .twobottomleft-word {
+    text-align: center;
+    color: #11b6d9;
+    font-size: 43px;
+    line-height: 105px;
+    height: 90px;
+}
+
+.wrap-three .twobottomleft .mybox {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 0;
+    right: 0;
+    top: 11px;
+    bottom: 0;
+    margin: auto;
+}
+
+.wrap-three .twobottomleft .squ {
+    width: 400px;
+    height: 121px;
+    background: url("../images/box_bg.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.wrap-three .twobottomleft .squ h4 {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    line-height: 71px;
+}
+
+.wrap-three .twobottomleft .squ span {
+    font-size: 28px;
+    display: block;
+    text-align: center;
+    color: #afccfc;
+}
+
+.wrap-three .twobottomleft .squ1 {
+    top: 0px;
+    left: 30px;
+}
+
+.wrap-three .twobottomleft .squ2 {
+    top: 0px;
+    right: 30px;
+}
+
+.wrap-three .twobottomleft .squ3 {
+    bottom: 0px;
+    left: 30px;
+}
+
+.wrap-three .twobottomleft .squ4 {
+    bottom: 0px;
+    right: 30px;
+}
+
+.wrap-three .twobottomleft .circle2 {
+    position: absolute;
+    width: 390px;
+    left: 0;
+    right: 0;
+    top: 92px;
+    bottom: 0;
+    margin: auto;
+}
+
+#three-box1 {
+    width: 100%;
+    height: 100%;
+    animation: move 3s linear infinite;
+}
+
+.wrap-three .mybox .time {
+    font-size: 38px;
+    color: white;
+    position: absolute;
+    top: 137px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.pollution-info .data {
+    overflow: hidden;
+    border-bottom: 1px solid #202e4d;
+}
+
+.pollution-info .data li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    height: 145px;
+    border-right: 1px solid #202e4d;
+}
+
+.pollution-info .data li:lase-child {
+    border: none;
+}
+
+.pollution-info .data li p {
+    font-size: 36px;
+    color: #47c2cf;
+    font-weight: bold;
+    height: 85px;
+    line-height: 95px;
+}
+
+.pollution-info .data li span {
+    font-size: 28px;
+    color: #afccfc;
+}
+
+.pollution-info .name {
+    color: #fff;
+    margin: 0 39px;
+    font-size: 26px;
+    line-height: 80px;
+    height: 38px;
+}
+
+/*新增 2018-11-16*/
+
+.wrap .wrap-one .one .one-top,
+.wrap .wrap-one .one .one-bottom,
+.wrap .wrap-one .three,
+.wrap .wrap-one .four,
+.wrap .wrap-one .two,
+.wrap .wrap-two .top .top-left .top-left1,
+.wrap .wrap-two .top .top-left .top-left2,
+.wrap .wrap-two .top .top-right,
+.wrap .wrap-two .bottom .bottom-left,
+.wrap .wrap-two .bottom .bottom-right {
+    overflow: hidden;
+    background: none;
+}
+
+.new-bg {
+    position: relative;
+    margin: 2px;
+    border: 2px solid #749bdb;
+    border: 2px solid #476fb1;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: rgba(95, 121, 169, .2);
+}
+
+.new-bg::before {
+    content: ' ';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: url("../images/4.png") no-repeat left top, url("../images/1.png") no-repeat left bottom, url("../images/3.png") no-repeat right top, url("../images/2.png") no-repeat right bottom;
+}
+
+.new-box {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.new-box::before {
+    content: ' ';
+    display: block;
+    width: 17px;
+    height: 14px;
+    position: absolute;
+    left: 21px;
+    top: -2px;
+    background: url("../images/9.png") no-repeat left top;
+}

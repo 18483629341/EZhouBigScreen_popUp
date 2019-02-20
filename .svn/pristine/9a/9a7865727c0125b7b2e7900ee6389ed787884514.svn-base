@@ -650,13 +650,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tablistsBox">
-                        <ul class="selfTabs flexBlock" role="tablist">
-                            <li class="selfTab active" data-content="sha_data">监测数据</li>
-                            <li class="selfTab " data-content="sha_photo">现场照片</li>
-                            <li class="selfTab " data-content="sha_video">现场视频</li>
-                        </ul>
-                    </div>
+                    <ul class="selfTabs flexBlock" role="tablist">
+                        <li class="selfTab active" data-content="sha_data">监测数据</li>
+                        <li class="selfTab " data-content="sha_photo">现场照片</li>
+                        <li class="selfTab " data-content="sha_video">现场视频</li>
+                    </ul>
                     <div class="tab-content">
                         <!-- 监测数据  start -->
                         <div class="tab-pane active" id="sha_data">

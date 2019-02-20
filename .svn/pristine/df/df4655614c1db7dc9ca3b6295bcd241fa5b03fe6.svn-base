@@ -1,0 +1,14 @@
+html{
+     font-family: "Hiragino Sans GB";
+ }
+html,body,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,form,p,input,a{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}

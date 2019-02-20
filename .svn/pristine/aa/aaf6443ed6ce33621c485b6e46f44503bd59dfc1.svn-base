@@ -10,8 +10,8 @@ $(function () {
 	// playCon3.selfVideoControl();
 
 	//纱帽弹窗上的线图   绘制
-	var initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
-	popupObj0=initPopupObjByData0.init('ShaCanvas');
+	initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
+	popupObj0=initPopupObjByData0.init('P2comCanvas');
 	initPopCanvas = new InitPopCanvas(popupObj0);
 	initPopCanvas.initCanvas();
 })
@@ -28,10 +28,9 @@ var dataSha={                                              //！！！！！！�
 		},
 		
 	]
-}
+
 
 $("body").on('click','.PopUpBox_sha .tabLi',function(){
-	$(this).siblings('.tabLi').removeClass('active');
-	$(this).addClass('active');
+	$(this).toggleClass('active');
 	initPopCanvas.initCanvas();
 })
