@@ -123,13 +123,10 @@ li {
   background: url('../images/upause.png');
 }
 .popUpcanvasBox {
-  border: 1px solid yellow;
   width: 770px;
-  height: 326px;
+  height: 346px;
+  margin-top: -35px;
   display: none;
-}
-.lineCanvas {
-  border: 1px solid red;
 }
 .active {
   display: block;

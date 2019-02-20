@@ -122,8 +122,8 @@ function InitPopCanvas(obj){
 			grid: {
 				top:40,
 				left: '0%',
-				right: '0%',
-				bottom: 0,
+				right: '4%',
+				bottom: 20,
 				containLabel: true,
 				show:false
 			},
@@ -145,6 +145,7 @@ function InitPopCanvas(obj){
 				},
 				axisLabel: {        
 					show: true,
+					rotate:-45,    
 					textStyle: {
 						color: '#c3d4ff',
 					   fontSize:14
@@ -160,19 +161,21 @@ function InitPopCanvas(obj){
 				nameTextStyle:{
 					color:'#c3d4ff',
 					align:'left',
-					padding: [0,0,20,0],
+					padding: [0,0,5,0],
 					fontSize:14
 				},
-				axisLabel: {        
+				axisLabel: {  
 					show: true,
 					textStyle: {
 						color: '#c3d4ff',
-						fontSize:13
+						fontSize:13,
+						padding: [10, 4, 5, 10]
 					},
 					formatter:this._obj.formatter||'{value}'
 				},
 				axisLine: {//Y轴线的设置
 					show: false,
+					
 				},
 				axisTick: {
 					show: false
