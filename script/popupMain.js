@@ -122,7 +122,7 @@ function InitPopCanvas(obj){
 			grid: {
 				top:40,
 				left: '0%',
-				right: '4%',
+				right: 33,
 				bottom: 20,
 				containLabel: true,
 				show:false
@@ -137,7 +137,6 @@ function InitPopCanvas(obj){
 						type:'dashed',
 						align:'right',
 						padding: [3, 4, 5, 10]
-						// verticalAlign:'top'
 					}
 				},
 				axisTick: {
@@ -148,7 +147,7 @@ function InitPopCanvas(obj){
 					rotate:-45,    
 					textStyle: {
 						color: '#c3d4ff',
-					   fontSize:14
+					   fontSize:14,
 					}
 				},
 				data: this._obj.xData||arrMonth4,
@@ -169,7 +168,7 @@ function InitPopCanvas(obj){
 					textStyle: {
 						color: '#c3d4ff',
 						fontSize:13,
-						padding: [10, 4, 5, 10]
+					
 					},
 					formatter:this._obj.formatter||'{value}'
 				},
