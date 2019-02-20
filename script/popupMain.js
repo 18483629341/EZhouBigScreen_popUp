@@ -68,7 +68,7 @@ function PlayCon(videoEleId) {
 
 }
 function InitPopCanvas(obj){
-	console.log(obj);
+	//console.log(obj);
 	this._obj=obj
 	this.elementId=this._obj.elementId;
 	this.colorArr=this._obj.colorArr;
@@ -93,7 +93,7 @@ function InitPopCanvas(obj){
 				noActiveN++;
 		   }
 
-		      if(noActiveN==3){//至少显示第一条
+		      if(noActiveN==this.lineGraphS.length){//至少显示第一条
 				_colors=this._obj.colorArr[0];
 				_series=this._obj.seriesArr[0];
 				$(this.lineGraphS[0]).addClass('active');
@@ -261,11 +261,27 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 	this.setPopupObj=function(obj){//初始化或更新数据源
 		var popupObj2={};
 		popupObj2.xData=Obj.xData;//注意Obj为原型参数
+		//cloneObj(origin, target)
 		popupObj2.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
 		popupObj2.Yname = 'mg/l';
-	    popupObj2.andanArr = obj.andanArr;
-		popupObj2.MnArr =obj.MnArr;
-		popupObj2.PArr = obj.PArr;
+		var keys=Object.keys(obj);
+		//console.log(obj,Obj.promtArr);
+		popupObj2.seriesArr=[];
+		for(let i=0;i<keys.length;i++){
+			let item=keys[i];
+			var seryObj={
+			 name:Obj.promtArr[i],
+			 type: 'line',
+			 data: obj[item],
+			 smooth: true,
+			 lineStyle: {
+				 width: 2,
+			 },
+			 symbol: 'none'
+			 };
+			  //将所有数组  赋值到   seriesArr数组中
+			 popupObj2.seriesArr.push(seryObj);
+		}
 		popupObj2.Ylabel = function(value){
 			return value.toFixed(1);
 		};
@@ -278,43 +294,27 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 			return a.toFixed(1);
 		};
 		popupObj2.lineGraphS=$(this.popUpDataObj.elementClass+' .lineGraph');
-		//将三组数组传到   seriesArr数组中
-		popupObj2.seriesArr = [{
-				name: '氨氮',
-				type: 'line',
-				data: obj.andanArr,
-				smooth: true,
-				lineStyle: {
-					width: 2,
-				},
-				symbol: 'none'
-			},
-			{
-				name: '高锰酸钾指数',
-				type: 'line',
-				stack: '总量',
-				data: obj.MnArr,
-				smooth: true,
-				lineStyle: {
-					width: 2,
-				},
-				symbol: 'none'
-			},{
-				name: '总磷',
-				type: 'line',
-				stack: '总量',
-				data: obj.PArr,
-				smooth: true,
-				lineStyle: {
-					width: 2,
-				},
-				symbol: 'none'
-			}
-		];
+		
+		
 		return popupObj2;
 	}
 }
 function hasActive(str){
     var reg=/active*/;
     return reg.test(str);
+}
+/* .深度克隆 对象（针对 对象 或 对象数组 或 数组） 经典 */
+ 
+function cloneObj(origin, target) {   
+	var target = target || {};
+	if (origin instanceof Array) {
+		target = [];
+	} else if (origin == null) {//null或者undefined时
+		target = origin;
+	}
+	for (var key in origin) { //此方法即可遍历对象，也可遍历数组
+		target[key] = typeof val === 'object' ? cloneObj(origin[key], target[key]) : origin[key];
+		//typeof val==='object' 数组和对象以及null
+	}
+	return target;
 }
