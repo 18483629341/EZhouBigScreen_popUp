@@ -262,7 +262,7 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 		var popupObj2={};
 		popupObj2.xData=Obj.xData;//注意Obj为原型参数
 		//cloneObj(origin, target)
-		popupObj2.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
+		popupObj2.colorArr = ["#00ccff","#fd4800", "#f1ec3f","#72e75e","#cc00ff"];
 		popupObj2.Yname = 'mg/l';
 		var keys=Object.keys(obj);
 		//console.log(obj,Obj.promtArr);
@@ -279,7 +279,7 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 			 },
 			 symbol: 'none'
 			 };
-			  //将所有数组  赋值到   seriesArr数组中
+			  //将所有数组  依次加入到   seriesArr数组中
 			 popupObj2.seriesArr.push(seryObj);
 		}
 		popupObj2.Ylabel = function(value){
