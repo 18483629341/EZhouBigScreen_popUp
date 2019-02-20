@@ -120,7 +120,7 @@ function InitPopCanvas(obj){
 				},
 			},
 			grid: {
-				top:80,
+				top:40,
 				left: '0%',
 				right: '0%',
 				bottom: 0,

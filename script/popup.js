@@ -11,12 +11,16 @@ $(function () {
 	// playCon3.selfVideoControl();
 
 	//纱帽弹窗上的线图   绘制
-	
+			//柱状图
+	var echartsBar=echarts.init(document.getElementById('ShaCanvasBar'));
+	echartsBar.setOption(optionBar);
+            //线图
 	var initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
 	popupObj0=initPopupObjByData0.init('ShaCanvasLine');
 	initPopCanvas = new InitPopCanvas(popupObj0);
 	initPopCanvas.initCanvas();
 	shaPraghToggle();
+
 })
 /**************弹窗显示/隐藏控制****** */
 /*********popup1   线框图的相关数据 / 纱帽 的数据对象数组***** */
@@ -53,3 +57,17 @@ function shaPraghToggle(){
 		$('.PopUpBox_sha .barCanvas').addClass('active');
 	})
 }
+var optionBar = {
+	//color:colorP,//调色板
+    xAxis: {
+        type: 'category',
+        data: ['10-01','10-02','10-03','10-04','10-05','10-06','10-07','10-08','10-09','10-10','10-11','10-12']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [1,2,3, 4, 5,6, 4,3,3, 1, 6],
+        type: 'bar'
+    }]
+};
