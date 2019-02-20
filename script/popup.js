@@ -2,6 +2,7 @@ $(function () {
 	loadImg();
 	popContorl();
 	contentToggle();
+	
 	var playCon1 = new PlayCon("video1");
 	playCon1.selfVideoControl();
 	// var playCon2 = new PlayCon("video2");
@@ -10,10 +11,12 @@ $(function () {
 	// playCon3.selfVideoControl();
 
 	//纱帽弹窗上的线图   绘制
+	
 	var initPopupObjByData0=new InitPopupObjByData('.PopUpBox_sha',dataSha);
-	popupObj0=initPopupObjByData0.init('ShaCanvas');
+	popupObj0=initPopupObjByData0.init('ShaCanvasLine');
 	initPopCanvas = new InitPopCanvas(popupObj0);
 	initPopCanvas.initCanvas();
+	shaPraghToggle();
 })
 /**************弹窗显示/隐藏控制****** */
 /*********popup1   线框图的相关数据 / 纱帽 的数据对象数组***** */
@@ -22,16 +25,29 @@ var dataSha={                                              //！！！！！！�
 	dataArr:[
 		{
 			name:"",
+			waterAssArr : [9.0, 6.0, 8.0,7.0, 6.0, 8.0, 9.0, 6.0, 8.0,  9.0, 6.0, 8.0],
 			andanArr : [9.0, 6.0, 8.0,7.0, 6.0, 8.0, 9.0, 6.0, 8.0,  9.0, 6.0, 8.0],
 			MnArr : [4.0, 6.0, 5.5,5.5, 5.5, 4.0, 6.0, 5.5,  4.0,  5.5, 4.0, 6.0], 
+			CheOxyArr:[4.0, 6.0, 5.5,5.5, 5.5, 4.0, 6.0, 5.5,  4.0,  5.5, 4.0, 6.0],
 			PArr : [6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6]
 		},
 		
 	]
 }
-
-$("body").on('click','.PopUpBox_sha .tabLi',function(){
-	$(this).siblings('.tabLi').removeClass('active');
-	$(this).addClass('active');
-	initPopCanvas.initCanvas();
-})
+function shaPraghToggle(){
+	$("body").on('click','.PopUpBox_sha .lineGraph',function(){
+		$(this).toggleClass('active');
+		$('.PopUpBox_sha .barGraph').removeClass('active');
+	
+		$('.PopUpBox_sha .barCanvas').removeClass('active');
+		$('.PopUpBox_sha .lineCanvas').addClass('active');
+		initPopCanvas.initCanvas();
+	})
+	$("body").on('click','.PopUpBox_sha .barGraph',function(){
+		$(this).addClass('active');
+		$('.PopUpBox_sha .lineGraph').removeClass('active');
+	
+		$('.PopUpBox_sha .lineCanvas').removeClass('active');
+		$('.PopUpBox_sha .barCanvas').addClass('active');
+	})
+}

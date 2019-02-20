@@ -1,0 +1,18 @@
+水质评价        Water quality evaluation 
+氨氮            ammonia nitrogen
+高锰酸钾指数     Potassium permanganate index
+化学需氧量       Chemical oxygen demand
+溶解氧           dissolved oxygen
+总磷             total phosphorus
+
+AQI
+SO2
+NO2
+PV2 . 5
+PM10
+
+废气           waste gas
+废水           waste water
+二氧化硫        sulfur dioxide
+氮氧化物        nitrogen oxide
+烟尘            smoke

@@ -68,13 +68,14 @@ function PlayCon(videoEleId) {
 
 }
 function InitPopCanvas(obj){
+	console.log(obj);
 	this._obj=obj
 	this.elementId=this._obj.elementId;
 	this.colorArr=this._obj.colorArr;
 	this.seriesArr=this._obj.seriesArr;
 	this.Yname=this._obj.Yname;
 	this.popUpChart=echarts.init(document.getElementById(this._obj.elementId));
-	this.tabLiS=this._obj.tabLiS;
+	this.lineGraphS=this._obj.lineGraphS;
 	this.setObj=function(newObj){
         this._obj=newObj
 	}
@@ -82,8 +83,8 @@ function InitPopCanvas(obj){
 		let _colors=[];
 		let _series=[];
 		var noActiveN=0;
-		for(let i=0;i<this.tabLiS.length;i++){
-			var item=this.tabLiS[i];
+		for(let i=0;i<this.lineGraphS.length;i++){
+			var item=this.lineGraphS[i];
 			//if(item.className.)
 		   if(hasActive(item.className)){
 				_colors.push(this._obj.colorArr[i]);
@@ -95,7 +96,7 @@ function InitPopCanvas(obj){
 		      if(noActiveN==3){//至少显示第一条
 				_colors=this._obj.colorArr[0];
 				_series=this._obj.seriesArr[0];
-				$(this.tabLiS[0]).addClass('active');
+				$(this.lineGraphS[0]).addClass('active');
 			  }
 			//if(item.className.)
 		}
@@ -276,7 +277,7 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 			var a=value.max*1.2;
 			return a.toFixed(1);
 		};
-		popupObj2.tabLiS=$(this.popUpDataObj.elementClass+' .tabLi');
+		popupObj2.lineGraphS=$(this.popUpDataObj.elementClass+' .lineGraph');
 		//将三组数组传到   seriesArr数组中
 		popupObj2.seriesArr = [{
 				name: '氨氮',

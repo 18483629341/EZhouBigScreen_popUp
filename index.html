@@ -661,19 +661,21 @@
                         <!-- 监测数据  start -->
                         <div class="tab-pane active" id="sha_data">
                             <ul class="canvasTab flexBlock">
-                                <li class="tabLi flex1 active" data-name="waterAssement">水质评价</li>
-                                <li class="tabLi flex1" data-name="NitrogenHigh">氨氮</li>
-                                <li class="tabLi longerText" data-name="ManganateIndex ">高锰酸钾指数</li>
-                                <li class="tabLi longerText" data-name="ChemicalOxyDemand">化学需氧量</li>
-                                <li class="tabLi flex1" data-name="DissolvedOxygen">溶解氧</li>
-                                <li class="tabLi flex1" data-name="TotalPhosphorus">总磷</li>
+                                <li class="tabLi flex1  barGraph" data-name="waterAssement">水质评价</li>
+                                <li class="tabLi flex1 lineGraph active" data-name="NitrogenHigh">氨氮</li>
+                                <li class="tabLi longerText lineGraph" data-name="ManganateIndex">高锰酸钾指数</li>
+                                <li class="tabLi longerText lineGraph" data-name="ChemicalOxyDemand">化学需氧量</li>
+                                <li class="tabLi flex1 lineGraph" data-name="DissolvedOxygen">溶解氧</li>
+                                <li class="tabLi flex1 lineGraph" data-name="TotalPhosphorus">总磷</li>
                             </ul>
                             <div class="updateTime">更新时间:
                                 <span>2018-12</span>
                             </div>
-                            <div class="popUpcanvasBox" id="ShaCanvas">
+                            <div class="popUpcanvasBox barCanvas " id="ShaCanvasBar">
                             </div>
-                            <div class="legend2 Popuplegend">
+                            <div class="popUpcanvasBox lineCanvas active" id="ShaCanvasLine">
+                            </div>
+                            <!-- <div class="legend2 Popuplegend">
                                 <ol class="LegendList">
                                     <li class="LegendLi2">
                                         <span class="WaterQulLine  OneLevel"></span>
@@ -688,7 +690,7 @@
                                         <span class="RemarkName">总磷</span>
                                     </li>
                                 </ol>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- 监测数据  end -->
                         <!-- 现场照片  start -->

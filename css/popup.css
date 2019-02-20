@@ -126,6 +126,13 @@ li {
   border: 1px solid yellow;
   width: 100%;
   height: 326px;
+  display: none;
+}
+.lineCanvas {
+  border: 1px solid red;
+}
+.active {
+  display: block;
 }
 .Popuplegend {
   text-align: center;
