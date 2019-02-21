@@ -3,12 +3,12 @@ $(function () {
 	popContorl();
 	contentToggle();
 
-	var playCon1 = new PlayCon("sha_video","video1");
+	var playCon1 = new PlayCon("video1");
 	playCon1.selfVideoControl();
-	var playCon2 = new PlayCon("kai_video","video2");
-	playCon2.selfVideoControl();
-	var playCon3 = new PlayCon("pol_video","video3");
-	playCon3.selfVideoControl();
+	// var playCon2 = new PlayCon("video2");
+	// playCon2.selfVideoControl();
+	// var playCon3 = new PlayCon("video3");
+	// playCon3.selfVideoControl();
 
 	//纱帽弹窗上的线图   绘制
 	//柱状图
@@ -32,7 +32,7 @@ var dataSha = { //！！！！！！！！！！！！！！！！！需要后�
 			'andanArr': [9.0, 6.0, 8.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0, 9.0, 6.0, 8.0],
 			'MnArr': [4.0, 6.0, 5.5, 5.5, 5.5, 4.0, 6.0, 5.5, 4.0, 5.5, 4.0, 6.0],
 			'CheOxyArr': [5.5, 4.0, 5.5, 4.0, 4.0, 6.0, 5.5, 5.5, 5.5, 4.0, 6.0, 6.0],
-			'DisOxyArr': [8.0, 9.0, 6.0, 9.0, 6.0, 12.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0], //溶解氧
+			'DisOxyArr': [8.0, 9.0, 6.0, 9.0, 6.0, 8.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0], //溶解氧
 			'PArr': [6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6]
 		},
 

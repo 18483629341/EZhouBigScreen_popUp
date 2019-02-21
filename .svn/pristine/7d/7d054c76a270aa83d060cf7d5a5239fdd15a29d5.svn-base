@@ -888,7 +888,7 @@
                         <!-- 现场视频  start -->
                         <div class="tab-pane " id="kai_video">
                             <div class="videoDiv"  style="width: 100%; height: 100%;">
-                                <video id="video2" class="video" width="100%" height="100%"  poster="./images/u75.jpg"
+                                <video id="video1" class="video" width="100%" height="100%"  poster="./images/u75.jpg"
                                 webkit-playsinline="true" playsinline="true" type="video/mp4" 
                                 preload="" x5-video-player-type="h5" src="./images/jebsen.mp4" >
                                    
@@ -1022,7 +1022,7 @@
                         <!-- 现场视频  start -->
                         <div class="tab-pane " id="pol_video">
                             <div class="videoDiv"  style="width: 100%; height: 100%;">
-                                <video id="video3" class="video" width="100%" height="100%"  poster="./images/u75.jpg"
+                                <video id="video1" class="video" width="100%" height="100%"  poster="./images/u75.jpg"
                                 webkit-playsinline="true" playsinline="true" type="video/mp4" 
                                 preload="" x5-video-player-type="h5" src="./images/jebsen.mp4" >
                                    

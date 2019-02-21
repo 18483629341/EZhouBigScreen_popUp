@@ -34,7 +34,7 @@ li {
   display: none;
   position: absolute;
   width: 835px;
-  height: 820px;
+  height: 800px;
   top: 1080px;
   left: 1920px;
   z-index: 100;
@@ -46,11 +46,11 @@ li {
 }
 .PopUpBox_kai {
   top: 1080px;
-  left: 2820px;
+  left: 2720px;
 }
 .PopUpBox_pol {
   top: 1080px;
-  left: 3820px;
+  left: 3620px;
 }
 .PopUpBox.show {
   display: block;
@@ -125,16 +125,14 @@ li {
   width: 64px;
   height: 64px;
   margin: 13px;
-  margin: 13px 18px;
   background: url('../images/uplay.png');
 }
 .controlDiv .controlIcon.pause {
-  margin: 15px;
   background: url('../images/upause.png');
 }
 .popUpcanvasBox {
   width: 770px;
-  height: 376px;
+  height: 346px;
   margin-top: -35px;
   display: none;
 }
