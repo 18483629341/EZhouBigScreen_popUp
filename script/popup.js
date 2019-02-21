@@ -181,7 +181,7 @@ var dataSha = { //！！！！！！！！！！！！！！！！！需要后�
 }
 /*********popup2   线框图的相关数据 / 开发区 的数据对象数组***** */
 var dataKai = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
-	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
+	xData: ['10-01  00:00','10-01 02:00', '10-01  04:00', '10-01  06:00', '10-01  08:00', '10-01  10:00', '10-01  12:00', '10-01  14:00', '10-01  16:00', '10-01  18:00', '10-01  20:00', '10-01  22:00'],
 	promtArr: ['AQI', 'SO2', 'NO2', 'CO', 'O3', 'PM2.5', 'PM10'],
 	unit: ['mg/l'],
 	dataArr: [{
@@ -285,12 +285,14 @@ function selectToggle(canvasNo, elementClass) {
 			$(elementClass + ' .dropIcon.icon').removeClass('rotatel');
 		}, 1000);
 		var getData=null;
+
+
 		//发送数据请求             !!!!!!!!!!!!!!!需要后台根据'data-key'来发送请求
 		//$.getJSON("words.json", {pollId: index}, function (data) {
 			//var getData=data;  
 			//postCallback();
 		//});
-		getData = {
+		getData = {//这个是假设的数据，
 			'wasteGasArr': [40, 60, 55, 55, 55, 40, 60, 55, 140, 55, 40, 60],
 			'wasteWaterArr': [90, 60, 80, 70, 160, 80, 90, 60, 80, 90, 60, 80],
 			'SO2Arr': [140, 60, 55, 55,55, 40, 55, 140,  55, 140, 60, 60],
@@ -298,6 +300,8 @@ function selectToggle(canvasNo, elementClass) {
 			'smokeArr': [88, 66, 50, 60, 155, 40,60, 155, 60,  60, 40, 56]
 		}
 		postCallback();
+
+
          //post请求后的回调函数
 		function postCallback(){
 			var newPopupObj = null;

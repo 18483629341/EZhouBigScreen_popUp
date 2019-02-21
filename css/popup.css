@@ -96,9 +96,11 @@ li {
   color: #00ccff;
 }
 .tab-content {
-  padding: 12px 20px 20px 20px;
   width: 100%;
   height: 414px;
+}
+.tab-content .tab-pane {
+  padding: 12px 20px 20px 20px;
 }
 .waterImg {
   width: 72px;
@@ -109,6 +111,7 @@ li {
 }
 .videoDiv {
   position: relative;
+  top: -6px;
 }
 .controlDiv {
   position: absolute;
@@ -133,8 +136,8 @@ li {
   background: url('../images/upause.png');
 }
 .popUpcanvasBox {
-  width: 770px;
-  height: 376px;
+  width: 790px;
+  height: 396px;
   margin-top: -35px;
   display: none;
 }
@@ -267,6 +270,23 @@ li {
 .carousel .rightIcon {
   background: url('../images/u89.png') no-repeat;
 }
+.selfCarouselCaption {
+  width: 26%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  padding: 8px 20px 12px;
+  text-align: left;
+  bottom: 36px;
+}
+.selfCarouselCaption .li-heading {
+  font-size: 14px;
+  line-height: 22px;
+  color: #e3e3e3;
+}
+.selfCarouselCaption:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
 .levelBox {
   width: 200px;
   height: 100%;
@@ -296,14 +316,13 @@ li {
 .assTextDiv {
   height: 70px;
   margin-top: -20px;
-  background: linear-gradient(to top bottom, rgba(0, 0, 0, 0), #000000);
-  background: -webkit-linear-gradient(red, blue);
+  background: -webkit-linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
   /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(red, blue);
+  background: -o-linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
   /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(red, blue);
+  background: -moz-linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
   /* Firefox 3.6 - 15 */
-  background: linear-gradient(rgba(0, 0, 0, 0), #000000);
+  background: linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
   /* 标准的语法 */
 }
 .assText {
@@ -361,6 +380,17 @@ li {
 .PopUpBox_pol .canvasTab {
   width: 356px;
   margin: 0;
+}
+.pol_data,
+.pol_data,
+.pol_data {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.pol_data .updateTime,
+.pol_data .updateTime,
+.pol_data .updateTime {
+  padding-right: 20px;
 }
 .canvasTab.alignRight {
   height: 1.6rem;

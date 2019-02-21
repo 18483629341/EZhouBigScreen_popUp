@@ -133,8 +133,8 @@ function InitPopCanvas(obj) {
 			grid: {
 				top: 40,
 				left: '0%',
-				right: 33,
-				bottom: 20,
+				right: 63,
+				bottom: 40,
 				containLabel: true,
 				show: false
 			},
