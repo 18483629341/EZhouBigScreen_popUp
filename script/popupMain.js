@@ -85,7 +85,7 @@ function InitPopCanvas(obj) {
 	this.elementId = this._obj.elementId;
 	this.colorArr = this._obj.colorArr;
 	this.seriesArr = this._obj.seriesArr;
-	this.Yname = this._obj.Yname;
+	this.unit = this._obj.unit;
 	this.popUpChart = echarts.init(document.getElementById(this._obj.elementId));
 	this.lineGraphS = this._obj.lineGraphS;
 	this.setObj = function (newObj) {
@@ -167,7 +167,7 @@ function InitPopCanvas(obj) {
 			},
 			yAxis: {
 				type: 'value',
-				name: this._obj.Yname,
+				name: this._obj.unit,
 				nameLocation: 'end',
 				nameTextStyle: {
 					color: '#c3d4ff',
@@ -277,7 +277,7 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		popupObj2.xData = Obj.xData; //注意Obj为原型参数
 		//cloneObj(origin, target)
 		popupObj2.colorArr = ["#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff",'#1e90cc','#ff00cc'];
-		popupObj2.Yname = 'mg/l';
+		popupObj2.unit = Obj.unit||'mg/l';
 		var keys = Object.keys(obj);
 		//console.log(obj,Obj.promtArr);
 		popupObj2.seriesArr = [];
