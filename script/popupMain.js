@@ -329,21 +329,40 @@ function drawpollutionEcharts(text, val, bg){
       series.push(setValue(1, bg), setValue(1, 'transparent'));
     }
     for (let i = 0; i < num2; i++) {
-      series.push(setValue(1, '#d5f0ff'), setValue(1, 'transparent'));
+      series.push(setValue(1, '#95989b'), setValue(1, 'transparent'));
     }
     series.push(setValue(25, 'transparent'));
     const option = {
       title: {
         x: '48%',
-        y: '28%',
+        y: '33%',
         subtext: text,
         textAlign: 'center',
         subtextStyle: {
-          fontSize: 40,
+          fontSize: 25,
           color: '#fff'
         }
       },
-      series: [{
+      series: [
+		{
+			name: '',
+			type: 'pie',
+			radius: ['67%', '68%'],
+			center: ['50%', '50%'],
+			startAngle: 225,
+			hoverAnimation: false,
+			legendHoverLink: false,
+			labelLine: {
+			  normal: {
+				show: false
+			  }
+			},
+			emphasis: {
+			  show: false
+			},
+			data: [setValue(75, '#95989b'), setValue(25, 'transparent')]
+		  },
+		{
         name: '',
         type: 'pie',
         radius: ['75%', '85%'],
@@ -360,10 +379,11 @@ function drawpollutionEcharts(text, val, bg){
           show: false
         },
         data: series
-      }, {
+	  },
+	   {
         name: '',
         type: 'pie',
-        radius: ['90%', '93%'],
+        radius: ['91%', '92%'],
         center: ['50%', '50%'],
         startAngle: 225,
         hoverAnimation: false,
@@ -376,7 +396,7 @@ function drawpollutionEcharts(text, val, bg){
         emphasis: {
           show: false
         },
-        data: [setValue(75, '#4da8fc'), setValue(25, 'transparent')]
+        data: [setValue(75, '#95989b'), setValue(25, 'transparent')]
       }]
     };
 

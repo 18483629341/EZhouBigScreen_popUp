@@ -22,7 +22,7 @@ $(function () {
 	shaPraghToggle();
 	//开发区弹窗上的线图   绘制
 		//污染率
-	drawpollutionEcharts('2%',2,'red');
+	drawpollutionEcharts('38',38,'#6eb720');
 		//线图
 	initPopupObjByData1 = new InitPopupObjByData('.PopUpBox_kai', dataKai);
 	popupObj1 = initPopupObjByData1.init('KaiCanvasLine');
