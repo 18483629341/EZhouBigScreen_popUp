@@ -5,7 +5,7 @@ function popContorl() {
 		var _con = $('.PopUpBox '); // 设置目标区域 
 		if (!_con.is(e.target) && _con.has(e.target).length === 0) {
 			// 功能代码
-			$('.PopUpBox').removeClass('show');
+			//$('.PopUpBox').removeClass('show');
 		}
 	});
 	$("body").on('click', '.PopUpclose', function () {
@@ -276,7 +276,7 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		var popupObj2 = {};
 		popupObj2.xData = Obj.xData; //注意Obj为原型参数
 		//cloneObj(origin, target)
-		popupObj2.colorArr = ["#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff"];
+		popupObj2.colorArr = ["#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff",'#1e90cc','#ff00cc'];
 		popupObj2.Yname = 'mg/l';
 		var keys = Object.keys(obj);
 		//console.log(obj,Obj.promtArr);

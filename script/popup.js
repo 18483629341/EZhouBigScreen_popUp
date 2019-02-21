@@ -3,11 +3,11 @@ $(function () {
 	popContorl();
 	contentToggle();
 
-	var playCon1 = new PlayCon("sha_video","video1");
+	var playCon1 = new PlayCon("sha_video", "video1");
 	playCon1.selfVideoControl();
-	var playCon2 = new PlayCon("kai_video","video2");
+	var playCon2 = new PlayCon("kai_video", "video2");
 	playCon2.selfVideoControl();
-	var playCon3 = new PlayCon("pol_video","video3");
+	var playCon3 = new PlayCon("pol_video", "video3");
 	playCon3.selfVideoControl();
 
 	//纱帽弹窗上的线图   绘制
@@ -15,14 +15,27 @@ $(function () {
 	var echartsBar = echarts.init(document.getElementById('ShaCanvasBar'));
 	echartsBar.setOption(optionBar);
 	//线图
-	var initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
-	popupObj0 = initPopupObjByData0.init('ShaCanvasLine');
-	initPopCanvas = new InitPopCanvas(popupObj0);
-	initPopCanvas.initCanvas();
+	 initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
+	 popupObj0 = initPopupObjByData0.init('ShaCanvasLine');
+	initPopCanvas0 = new InitPopCanvas(popupObj0);
+	initPopCanvas0.initCanvas();
 	shaPraghToggle();
+	//开发区弹窗上的线图   绘制
+	//线图
+	initPopupObjByData1 = new InitPopupObjByData('.PopUpBox_kai', dataKai);
+	popupObj1 = initPopupObjByData1.init('KaiCanvasLine');
+	initPopCanvas1 = new InitPopCanvas(popupObj1);
+	initPopCanvas1.initCanvas();
+	kaiPraghToggle();
+
 
 })
-/**************弹窗显示/隐藏控制****** */
+var initPopupObjByData0 = null;
+var popupObj0 = null;
+var initPopCanvas0 = null;
+var initPopupObjByData1 = null;
+var popupObj1 = null;
+var initPopCanvas1= null;
 /*********popup1   线框图的相关数据 / 纱帽 的数据对象数组***** */
 var dataSha = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
@@ -39,6 +52,23 @@ var dataSha = { //！！！！！！！！！！！！！！！！！需要后�
 	],
 	waterAssArr: []
 }
+/*********popup1   线框图的相关数据 / 纱帽 的数据对象数组***** */
+var dataKai = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
+	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
+	promtArr: ['AQI', 'SO2', 'NO2', 'CO', 'O3', 'PM2.5', 'PM10'],
+	dataArr: [{
+			//name:"",
+			'AQIArr': [9.0, 6.0, 8.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0, 9.0, 6.0, 8.0],
+			'SO2Arr': [4.0, 6.0, 5.5, 5.5, 5.5, 4.0, 6.0, 5.5, 4.0, 5.5, 4.0, 6.0],
+			'NO2Arr': [5.5, 4.0, 5.5, 4.0, 4.0, 6.0, 5.5, 5.5, 5.5, 4.0, 6.0, 6.0],
+			'COArr': [8.0, 9.0, 6.0, 9.0, 6.0, 12.0, 7.0, 6.0, 8.0, 9.0, 6.0, 8.0], //溶解氧
+			'O3Arr': [6.0, 5.5, 6.0, 8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6],
+			'PM2.5Arr': [7.0, 6.0, 8.0, 9.0, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 4.0, 5.6],
+			'PM10Arr': [6.0, 5.5, 6.0, 12.0, 7.0, 6.0, 8.0, 5.5, 4.0, 6.0, 4.0, 5.6]
+		},
+
+	]
+}
 
 function shaPraghToggle() {
 	$("body").on('click', '.PopUpBox_sha .lineGraph', function () {
@@ -47,7 +77,7 @@ function shaPraghToggle() {
 
 		$('.PopUpBox_sha .barCanvas').removeClass('active');
 		$('.PopUpBox_sha .lineCanvas').addClass('active');
-		initPopCanvas.initCanvas();
+		initPopCanvas0.initCanvas();
 	})
 	$("body").on('click', '.PopUpBox_sha .barGraph', function () {
 		$(this).addClass('active');
@@ -57,15 +87,15 @@ function shaPraghToggle() {
 		$('.PopUpBox_sha .barCanvas').addClass('active');
 	})
 }
-var waterAssData={
+var waterAssData = {
 	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
-	arr:[1, 2, 3, 4, 5, 6, 4, 3, 3, 1, 6,1]
+	arr: [1, 2, 3, 4, 5, 6, 4, 3, 3, 1, 6, 1]
 }
 var optionBar = {
 	//color:colorP,//调色板
-	color: ['#72e75e','#1e90ff',"#00ccff","#fd4800", "#f1ec3f","#72e75e","#cc00ff",'#1e90ff',"#00ccff","#fd4800",'#00ff00',"#00ccff"], //调色板
+	color: ['#72e75e', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"], //调色板
 	tooltip: {
-		show:false,
+		show: false,
 	},
 	grid: {
 		top: 40,
@@ -118,25 +148,30 @@ var optionBar = {
 				fontSize: 13,
 
 			},
-			formatter:function(y){
-				var r=null;
-				switch(y)
-					{
-						case 1:r='劣Ⅳ类'
-							break;
-						case 2:r='Ⅴ类'
-							break;
-						case 3:r='Ⅵ类'
-							break;
-						case 4:r='Ⅲ类'
-							break;
-						case 5:r='Ⅱ类'
-							break;
-						case 6:r='Ⅰ类'
-							break;
-						default:
-							r=' '
-					}
+			formatter: function (y) {
+				var r = null;
+				switch (y) {
+					case 1:
+						r = '劣Ⅳ类'
+						break;
+					case 2:
+						r = 'Ⅴ类'
+						break;
+					case 3:
+						r = 'Ⅵ类'
+						break;
+					case 4:
+						r = 'Ⅲ类'
+						break;
+					case 5:
+						r = 'Ⅱ类'
+						break;
+					case 6:
+						r = 'Ⅰ类'
+						break;
+					default:
+						r = ' '
+				}
 				return r;
 			}
 		},
@@ -160,8 +195,19 @@ var optionBar = {
 	},
 	series: [{
 		data: waterAssData.arr,
-		barCategoryGap:'80%' ,
+		barCategoryGap: '80%',
 		type: 'bar',
-		
+
 	}]
 };
+
+function kaiPraghToggle() {
+	$("body").on('click', '.PopUpBox_kai .lineGraph', function () {
+		$(this).toggleClass('active');
+		$('.PopUpBox_kai .barGraph').removeClass('active');
+
+		$('.PopUpBox_kai .barCanvas').removeClass('active');
+		$('.PopUpBox_kai .lineCanvas').addClass('active');
+		initPopCanvas1.initCanvas();
+	})
+}

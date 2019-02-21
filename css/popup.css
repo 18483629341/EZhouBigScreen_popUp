@@ -322,6 +322,6 @@ li {
   color: #fc0105;
 }
 /*     某些弹窗的单独设置  */
-.PopUpBox_pol .contentList .contentLi {
-  line-height: 56px;
+.PopUpBox_kai .contentList {
+  margin-top: 22px;
 }
