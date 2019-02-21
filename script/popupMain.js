@@ -313,7 +313,93 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		return popupObj2;
 	}
 }
+/**
+  
+   * @param {String} text 设置中间文字
+   * @param {Number} val 设置数值百分率
+   * @param {String} bg 设置污染率的颜色
+*/
+function drawpollutionEcharts(text, val, bg){
+    const value1 = val * 75 / 100;
+    const value2 = 75 - value1;
+    const num1 = value1 / 2;
+    const num2 = value2 / 2;
+    const series = [];
+    for (let i = 0; i < num1; i++) {
+      series.push(setValue(1, bg), setValue(1, 'transparent'));
+    }
+    for (let i = 0; i < num2; i++) {
+      series.push(setValue(1, '#d5f0ff'), setValue(1, 'transparent'));
+    }
+    series.push(setValue(25, 'transparent'));
+    const option = {
+      title: {
+        x: '48%',
+        y: '28%',
+        subtext: text,
+        textAlign: 'center',
+        subtextStyle: {
+          fontSize: 40,
+          color: '#fff'
+        }
+      },
+      series: [{
+        name: '',
+        type: 'pie',
+        radius: ['75%', '85%'],
+        center: ['50%', '50%'],
+        startAngle: 225,
+        hoverAnimation: true,
+        legendHoverLink: false,
+        labelLine: {
+          normal: {
+            show: false
+          }
+        },
+        emphasis: {
+          show: false
+        },
+        data: series
+      }, {
+        name: '',
+        type: 'pie',
+        radius: ['90%', '93%'],
+        center: ['50%', '50%'],
+        startAngle: 225,
+        hoverAnimation: false,
+        legendHoverLink: false,
+        labelLine: {
+          normal: {
+            show: false
+          }
+        },
+        emphasis: {
+          show: false
+        },
+        data: [setValue(75, '#4da8fc'), setValue(25, 'transparent')]
+      }]
+    };
 
+    const pollutionEcharts = echarts.init(
+     document.getElementById('polluEcharts')
+    );
+    pollutionEcharts.setOption(option);
+}
+/**
+* 设置echarts显示对象
+* @param {numbr} value 值
+* @param {String} color 颜色
+*/
+function setValue(value, color) {
+ return {
+   value,
+   itemStyle: {
+	 normal: {
+	   color,
+	 }
+   }
+ };
+}
 function hasActive(str) {
 	var reg = /active*/;
 	return reg.test(str);

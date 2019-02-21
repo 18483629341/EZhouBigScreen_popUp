@@ -21,6 +21,7 @@ $(function () {
 	initPopCanvas0.initCanvas();
 	shaPraghToggle();
 	//开发区弹窗上的线图   绘制
+	drawpollutionEcharts('--',2,'red');
 		//线图
 	initPopupObjByData1 = new InitPopupObjByData('.PopUpBox_kai', dataKai);
 	popupObj1 = initPopupObjByData1.init('KaiCanvasLine');
