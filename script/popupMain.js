@@ -55,7 +55,6 @@ function PlayCon(videoConEleId, videoEleId) {
 			_this.toggle();
 		})
 		$("body").keydown(function (e) {
-			console.log(e);
 			var e = window.event ? window.event : e;    
 			var keyCode = e.which ? e.which : e.keyCode;     //tab
 			    
@@ -213,23 +212,25 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 	//elementClass 弹窗的最大容器的独特的类  ,如‘.PopUpBox_jing’
 	this.popUpDataObj = {};
 	this.popUpDataObj.elementClass = elementClass,
-		this.popUpDataObj.xData = Obj.xData;
+	this.popUpDataObj.xData = Obj.xData;
 	this.popUpDataObj.popupObjArr = [];
 	this.dataArr = Obj.dataArr;
+	this.pollNameList=Obj.pollNameList;
 	this.initTablist = function () { //初始化某个弹幕的选框的dom
+		console.log(this.pollNameList);
 		let inhtml = '';
 		inhtml = '<span class="selectSpan ">' +
-			'<span class="spanInner active" data-index="0" >' + this.dataArr[0].name + '</span>' +
+			'<span class="spanInner active" data-key="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[0].pollName + '</span>' +
 			'<i class="icon dropIcon"></i>' +
 			'</span>' +
 			'<ul class="TreeList" >';
 		let listArr = '';
-		for (let i = 0; i < this.dataArr.length; i++) {
+		for (let i = 0; i < this.pollNameList.length; i++) {
 			let lihtml = '';
 			if (i == 0) {
-				lihtml = '<li class="treeLi active" data-index="0" >' + this.dataArr[i].name + '</li>'
+				lihtml = '<li class="treeLi active" data-index="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[i].pollName + '</li>'
 			} else {
-				lihtml = '<li class="treeLi" data-index="' + i + '">' + this.dataArr[i].name + '</li>'
+				lihtml = '<li class="treeLi" data-index="'+this.pollNameList[i].pollId+'">' + this.pollNameList[i].pollName + '</li>'
 			}
 			listArr += lihtml;
 		}
@@ -242,35 +243,6 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		let obj = this.setPopupObj(this.dataArr[0]);
 		obj.elementId = elementId;
 		return obj
-	}
-	this.dragToggle = function (canvasNo) {
-		let _this = this;
-		let elementClass = _this.popUpDataObj.elementClass;
-		$("body").on('click', elementClass + ' .selectLi', function (e) {
-			stopBubble(e);
-			$(elementClass + ' .TreeList').toggleClass('show');
-			$(elementClass + ' .dropIcon.icon').toggleClass('rotatel');
-		})
-		$("body").on('click', elementClass + ' .treeLi', function (e) {
-			stopBubble(e);
-			var name = $(this).html();
-			var i = $(this).attr('data-index');
-			$(elementClass + ' .spanInner').attr('data-index', i);
-			$(elementClass + ' .spanInner').html(name);
-			$(elementClass + ' .treeLi').removeClass("active");
-			$(this).addClass("active");
-			$(elementClass + ' .spanInner').addClass("active");
-			setTimeout(function () {
-				$(elementClass + ' .TreeList').removeClass('show');
-				$(elementClass + ' .dropIcon.icon').removeClass('rotatel');
-			}, 1000);
-			//根据排污口渲染数据；
-			var newPopupObj = null;
-			//cloneObj(_this.init,newPopupObj);//深度克隆数据
-			newPopupObj = _this.setPopupObj(_this.dataArr[i]); //根据i值变化数据源
-			canvasNo.setObj(newPopupObj); //canvas引入数据源
-			canvasNo.initCanvas(); //绘制图形
-		})
 	}
 	this.setPopupObj = function (obj) { //初始化或更新数据源
 		var popupObj2 = {};

@@ -413,3 +413,89 @@ li{
 		margin-top:22px;
 	}
 }
+.PopUpBox_pol{
+	.canvasTab{
+		width:356px;
+		margin:0;
+	}
+}
+
+.canvasTab.alignRight {
+    height: 1.6rem;
+    display: block;
+    float: right;
+    margin-top: -70px;
+}
+.InfoListContent{
+	float: right;
+	width: 3.5rem;
+	text-align: left;
+	// height: 1.6rem;
+
+	.selectLi{
+		border: 1px solid #00d1eb;
+		border-radius: .1rem;
+		color:#fff;
+		
+		cursor: pointer;
+		font-size: .35rem;
+		width: 100%;
+		height: .8rem;
+		line-height: .8rem;
+		padding-left: .35rem;
+		position: relative;
+		.spanInner{
+			color:#fff;
+		  }
+		.spanInner.active{
+			color:#00eafc;
+		  }
+		.TreeList{
+			width: 3.5rem;
+			position: absolute;
+			display: none;
+			z-index: 100;
+			left: -.01rem;
+			background: #080b2f;
+			border: 1px solid #00d1eb;
+			border-radius: .1rem;
+			.treeLi{
+				width: 3.4rem;
+				height: .8rem;
+				line-height: .8rem;
+				
+				color:#fff;
+				font-size: .35rem;
+				text-indent: .35rem;
+			}
+			.treeLi.active{
+				color:#00eafc;
+		  }
+		}
+		.TreeList.show{
+			display: block;
+		}
+		.dropIcon{
+			float: right;
+			margin-top: -.45rem;
+			// background-origin: 50% 50%;
+		}
+	}
+	
+	.dropIcon{
+		margin-left: .35rem;
+		margin-right: .35rem;
+	}
+}
+
+.dropIcon{
+	width:.25rem;
+	height:.125rem;
+	background: url(../images/xlsj.png) no-repeat;
+	background-size: 100% 100%;
+	// background-origin: 50% 50%;
+}
+.rotatel{
+	transform:rotate(180deg);
+	transform-origin: center;
+}	 
