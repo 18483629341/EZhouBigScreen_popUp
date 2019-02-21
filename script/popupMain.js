@@ -406,3 +406,9 @@ function cloneObj(origin, target) {
 	}
 	return target;
 }
+$("body").on('click',  '.left.carousel-control', function () {
+   $('.carousel').carousel('prev')
+})
+$("body").on('click',  '.right.carousel-control', function () {
+	$('.carousel').carousel('next')
+})
