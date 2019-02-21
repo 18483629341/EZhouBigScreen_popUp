@@ -24,7 +24,6 @@ function contentToggle() {
 		var contentName = $(this).attr("data-content");
 
 		var $target = $('.tab-pane[id=' + contentName + ']');
-		console.log($target);
 		$target.siblings('.tab-pane').removeClass('active');
 		$target.addClass('active');
 	})
@@ -48,7 +47,6 @@ function PlayCon(videoConEleId, videoEleId) {
 	this.selfVideoControl = function () {
 		var _this = this;
 		$("body").on('click', "#" + this.id, function () {
-			console.log("#" + this.id + " .controlIcon");
 			_this.toggle();
 		})
 		$("body").on('click', "#" + this.videoConEleId + " .controlIcon", function () {
@@ -79,7 +77,6 @@ function PlayCon(videoConEleId, videoEleId) {
 }
 
 function InitPopCanvas(obj) {
-	//console.log(obj);
 	this._obj = obj
 	this.elementId = this._obj.elementId;
 	this.colorArr = this._obj.colorArr;
@@ -217,7 +214,6 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 	this.dataArr = Obj.dataArr;
 	this.pollNameList=Obj.pollNameList;
 	this.initTablist = function () { //初始化某个弹幕的选框的dom
-		console.log(this.pollNameList);
 		let inhtml = '';
 		inhtml = '<span class="selectSpan ">' +
 			'<span class="spanInner active" data-key="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[0].pollName + '</span>' +
@@ -251,7 +247,6 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		popupObj2.colorArr = ["#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff",'#1e90cc','#ff00cc'];
 		popupObj2.unit = Obj.unit||'mg/l';
 		var keys = Object.keys(obj);
-		//console.log(obj,Obj.promtArr);
 		popupObj2.seriesArr = [];
 		for (let i = 0; i < keys.length; i++) {
 			let item = keys[i];
@@ -384,10 +379,10 @@ function drawpollutionEcharts(text, val, bg){
 */
 function setValue(value, color) {
  return {
-   value,
+   value:value,
    itemStyle: {
 	 normal: {
-	   color,
+	   color:color,
 	 }
    }
  };
