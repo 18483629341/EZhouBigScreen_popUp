@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>鄂州大屏</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/gasWater.css">
+
+
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/popup.css" />
+
+
+</head>
+
+<body>
+    <div class="wrap">
+
+
+        <div class="bigCon" style="position: absolute;width:11520px;height:2160px">
+            <canvas id="canvas" width="11520" height="2160"></canvas>
+        </div>
+        <!--左边页面start-->
+        <div class="wrap-one">
+            <!--实时空气质量 start-->
+            <div class="one">
+                <div class="one-top">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">实时空气质量</span>
+                                <span class="title2">2018-11-30 10:00</span>
+                            </div>
+                            <div class="one-inner">
+                                <!-- <div class="oneinnertit">
+                                    <span class="show1">51</span><span class="show2">良</span>
+                                </div> -->
+                                <dl class="oneinnertit">
+                                    <dt>鄂州市</dt>
+                                    <dd>
+                                        <p class="num">133</p>
+                                        <p>
+                                            <span class="show1">AQI</span>
+                                            <span class="show2" style="background:#fec43a;">轻度污染</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                                <ul class="oneinnerleft">
+                                    <li>首要污染物：颗粒物（PM10）</li>
+                                    <li>空气监测点：11个</li>
+                                </ul>
+                                <ul class="oneinnerright">
+                                    <li>浓度值：48ug/m³</li>
+                                    <li>全省排名：5</li>
+                                </ul>
+                                <div class="ybtitle">
+                                    未来三天预报：
+                                </div>
+                                <ul class="oneinneryb">
+                                    <li>
+                                        <p class="time">12月01日</p>
+                                        <p class="poll">AQI：
+                                            <span style="color:#FFFF00;">50-80</span>
+                                        </p>
+                                        <p class="poll2">首要污染物：SO2</p>
+                                    </li>
+                                    <li>
+                                        <p class="time">12月01日</p>
+                                        <p class="poll">AQI：
+                                            <span style="color:#FFFF00;">50-80</span>
+                                        </p>
+                                        <p class="poll2">首要污染物：SO2</p>
+                                    </li>
+                                    <li>
+                                        <p class="time">12月01日</p>
+                                        <p class="poll">AQI：
+                                            <span style="color:#f00;">50-80</span>
+                                        </p>
+                                        <p class="poll2">首要污染物：SO2</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-bottom">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">考核目标完成情况</span>
+                                <span class="title2">截至2018-11-29</span>
+                            </div>
+                            <div class="box1-title">
+                                <span>
+                                    <img src="./images/11.png">2017年同期值</span>
+                                <span>
+                                    <img src="./images/10.png">2018年考核目标值</span>
+                            </div>
+                            <div class="onebottom">
+                                <div class="onebottom-list">
+                                    <p class="name">优良天数比例</p>
+                                    <div class="bar-box">
+                                        <p class="num">72%</p>
+                                        <div class="bar-silder">
+                                            <div class="color" style="width:72%"></div>
+                                            <div class="old" style="left:50%"></div>
+                                            <div class="new" style="left:70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="onebottom-list">
+                                    <p class="name">重污染天数</p>
+                                    <div class="bar-box">
+                                        <p class="num">15天</p>
+                                        <div class="bar-silder">
+                                            <div class="color" style="width:72%"></div>
+                                            <div class="old" style="left:50%"></div>
+                                            <div class="new" style="left:70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="onebottom-list">
+                                    <p class="name" style="margin-top:8px;">PM
+                                        <sub>2.5</sub>
+                                        <br>年均浓度</p>
+                                    <div class="bar-box">
+                                        <p class="num">72%</p>
+                                        <div class="bar-silder">
+                                            <div class="color" style="width:72%"></div>
+                                            <div class="old" style="left:50%"></div>
+                                            <div class="new" style="left:70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="onebottom-list">
+                                    <p class="name" style="margin-top:8px;">PM
+                                        <sub>10</sub>
+                                        <br>年均浓度</p>
+                                    <div class="bar-box">
+                                        <p class="num">72%</p>
+                                        <div class="bar-silder">
+                                            <div class="color" style="width:72%"></div>
+                                            <div class="old" style="left:50%"></div>
+                                            <div class="new" style="left:70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--全市优良天数start-->
+                <div class="three">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">全市空气质量排名</span>
+                                <span class="title2">截至2018-11-29</span>
+                            </div>
+                            <div class="div-title2">
+                                <span class="tabwater">优良率</span>
+                                <span>重污染天数</span>
+                                <span>PM
+                                    <sub>10</sub>
+                                </span>
+                                <span>PM
+                                    <sub>2.5</sub>
+                                </span>
+                            </div>
+                            <div class="rank" id="box3">
+                                <ul class="scroll-ul">
+                                    <li>
+                                        <p class="city-name">1鄂城区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">2华容区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:100%"></div>
+                                            <div class="old" style="left:70%"></div>
+                                        </div>
+                                        <p class="city-num">100%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">3梁子湖区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">4鄂州开发区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">5葛店开发区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">5葛店开发区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">5葛店开发区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">5葛店开发区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                    <li>
+                                        <p class="city-name">5葛店开发区</p>
+                                        <div class="city-silder">
+                                            <div class="color" style="width:80%"></div>
+                                            <div class="old" style="left:80%"></div>
+                                        </div>
+                                        <p class="city-num">80%</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--全市优良end-->
+            </div>
+            <!--空气质量实况end-->
+            <div>
+                <!--地图start-->
+                <div class="two">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title-map">
+                                <div class="title-inner">
+                                    <span class="two-title1 block1">空气质量在线监测</span>
+                                </div>
+                            </div>
+                            <div class="map-box">
+                                <div class="search" style="display:block">
+                                    <p>AQI</p>
+                                    <p class="active">SO
+                                        <sub>2</sub>
+                                    </p>
+                                    <p>NO
+                                        <sub>2</sub>
+                                    </p>
+                                    <p>CO</p>
+                                    <p>PM
+                                        <sub>2.5</sub>
+                                    </p>
+                                    <p>PM
+                                        <sub>10</sub>
+                                    </p>
+                                </div>
+                                <img src="./images/map3_03.png" style="width:100%;height:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--地图end-->
+                <!-- <div class="clear_both"></div> -->
+                <!--空气环境start-->
+                <div class="four">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">空气质量日历</span>
+                            </div>
+                            <div class="change" id="box4"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--空气环境end-->
+            </div>
+        </div>
+        <!--左边结束end-->
+
+        <!--中间start-->
+        <div class="wrap-two">
+            <div class="top">
+                <div class="top-left">
+                    <div class="top-left1">
+                        <div class="new-bg">
+                            <div class="new-box">
+                                <div class="title">
+                                    <span class="title1">水环境质量监测</span>
+                                </div>
+                                <div class="left1inner1">
+                                    <h1>11</h1>
+                                    <span>地表水监测断面</span>
+                                </div>
+                                <div class="left1inner2">
+                                    <span>国控断面：6个</span>
+                                    <span>引用水源地：6个</span>
+                                    <span>水质自动站：6个</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-left2">
+                        <div class="new-bg">
+                            <div class="new-box">
+                                <div class="title">
+                                    <span class="title1">水质达标情况</span>
+                                    <span class="title2">2018-10</span>
+                                </div>
+                                <div class="topleft2">
+                                    <div class="topleft2one" id="box5"></div>
+                                    <p class="box5-num">78.71%</p>
+                                    <p class="box5-title">达标率</p>
+                                    <div class="topleft2two">
+                                        <div class="topleft2twol part1">84%</div>
+                                        <div class="topleft2twor part2">
+                                            <h5>水质优良率</h5>
+                                        </div>
+                                        <div class="topleft2twol part3">84%</div>
+                                        <div class="topleft2twor part4">
+                                            <h5>劣V类比例</h5>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title-map">
+                                <div class="title-inner">
+                                    <span class="two-title1 block1">自动监测</span>
+                                </div>
+                            </div>
+                            <div class="map-box">
+                                <div class="search" style="display:block">
+                                    <p>氨氮</p>
+                                    <p class="active">CODMn</p>
+                                    <p>总磷</p>
+                                    <p>总氮</p>
+                                    <p>溶解氧</p>
+                                </div>
+                                <img src="./images/map3_03.png" style="width:100%;height:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">地表水水质级别构成</span>
+                                <span class="title2">2018-10</span>
+                            </div>
+                            <div class="twobottomleft">
+                                <div class="twobottomleft-one">
+                                    <div class="circle2">
+                                        <img src="./images/circle1_03.png" alt="" style="width:100%;" />
+                                    </div>
+                                    <div class="mybox">
+                                        <div id="box2"></div>
+
+                                        <p class="time">11月</p>
+                                        <p class="title">水质月报</p>
+                                    </div>
+                                </div>
+                                <div class="twobottomleft-two">
+                                    <div>
+                                        <span>57%</span>
+                                        <p>Ⅰ-Ⅲ类</p>
+                                    </div>
+                                    <div>
+                                        <span>24%</span>
+                                        <p>Ⅳ-Ⅴ类</p>
+                                    </div>
+                                    <div class="last1">
+                                        <span>19%</span>
+                                        <p>劣Ⅴ类</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">水质变化趋势</span>
+                            </div>
+                            <div class="gradient" id="box6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--中间end-->
+
+        <!--右面start-->
+        <div class="wrap-two wrap-three">
+            <div class="top">
+                <div class="top-left">
+                    <div class="top-left1">
+                        <div class="new-bg">
+                            <div class="new-box">
+                                <div class="title">
+                                    <span class="title1">全市污染源统计</span>
+                                </div>
+                                <div class="left1inner1">
+                                    <h1>1300</h1>
+                                    <span>污染源数量</span>
+                                </div>
+                                <div class="left1inner2">
+                                    <span>工业源：6个</span>
+                                    <span>农业污染源：6个</span>
+                                    <span>集中式处理：6个</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-left2">
+                        <div class="new-bg">
+                            <div class="new-box">
+                                <div class="title">
+                                    <span class="title1">污染源区域分布</span>
+                                </div>
+                                <table class="tab2">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>废水污染源（家）</th>
+                                            <th>废气污染源（家）</th>
+                                        </tr>
+                                    </thead>
+
+                                </table>
+                                <table class="topleft2">
+                                    <tbody class="tabbody">
+                                        <tr>
+                                            <td>鄂城区</td>
+                                            <td>22</td>
+                                            <td>22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>华容区</td>
+                                            <td>43</td>
+                                            <td>43</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>梁子湖区</td>
+                                            <td>43</td>
+                                            <td>43</td>
+                                        </tr>
+                                        <tr>
+                                            <td>鄂州开发区</td>
+                                            <td>43</td>
+                                            <td>43</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>葛店开发区</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>拜泉县</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>那和县</td>
+                                            <td>123</td>
+                                            <td>123</td>
+                                        </tr>
+                                        <tr>
+                                            <td>依安县</td>
+                                            <td>22</td>
+                                            <td>22</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title-map">
+                                <div class="title-inner">
+                                    <span class="two-title1 block1">重点源在线监控</span>
+                                    <span class="two-title2">排污许可证</span>
+                                    <span class="two-title2">机动车检测</span>
+                                    <span class="two-title2">餐饮油烟专项整治</span>
+                                </div>
+                            </div>
+                            <div class="map-box">
+                                <div class="search" style="display:block">
+                                    <p>废水污染源</p>
+                                    <p class="active">废气污染源</p>
+                                </div>
+                                <img src="./images/map3_03.png" style="width:100%;height:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">排污许可证</span>
+                            </div>
+                            <div class="twobottomleft-word">发证企业：54家</div>
+                            <div class="twobottomleft">
+                                <div class="circle2">
+                                    <img src="./images/newcircle_07.png" alt="" style="width:100%;" />
+                                </div>
+                                <div class="squ squ1">
+                                    <h4>10家</h4>
+                                    <span>专用设备制造业</span>
+                                </div>
+                                <div class="squ squ2">
+                                    <h4>8家</h4>
+                                    <span>化学原料和化学制品制造业</span>
+                                </div>
+                                <div class="squ squ3">
+                                    <h4>6家</h4>
+                                    <span>生态保护和环境治理业</span>
+                                </div>
+                                <div class="squ squ4">
+                                    <h4>11家</h4>
+                                    <span>金属制品业</span>
+                                </div>
+                                <div class="mybox">
+                                    <div id="three-box1"></div>
+                                    <p class="time">行业分布</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <div class="new-bg">
+                        <div class="new-box">
+                            <div class="title">
+                                <span class="title1">在线监控超标统计</span>
+                                <span class="title2">2017</span>
+                            </div>
+                            <div class="pollution-info">
+                                <ul class="data">
+                                    <li>
+                                        <p>327家</p>
+                                        <span>在线监控污染源</span>
+                                    </li>
+                                    <li>
+                                        <p>110家</p>
+                                        <span>废水污染源</span>
+                                    </li>
+                                    <li>
+                                        <p>217家</p>
+                                        <span>废气污染源</span>
+                                    </li>
+                                </ul>
+                                <p class="name">近7日污染源在线监控超标统计</p>
+                            </div>
+                            <div class="gradient" id="three-box2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右边end-->
+
+        <!-- 弹窗1 纱帽 start -->
+        <div class="PopUpBox show  PopUpBox_sha" id="PopUpBox_sha">
+            <div class="PopUpHeader">
+                <div class="PaddingContent">
+                    <h3>纱帽</h3>
+                    <span class="inlineBlock PopUpclose"></span>
+                </div>
+            </div>
+            <!-- PopUpHeader end-->
+            <div class="PopUpContent">
+                <div class="PaddingContent">
+                    <div class="flexBlock levelContainer">
+                        <div class="  levelBox sixLevel">
+                            <!-- 根据等级样式为 Ⅰ类对应样式为 oneLevel twoLevel  ...-->
+                            <div class="insideBox ">
+                                <div class="waterImg"></div>
+
+                            </div>
+                            <div class="levelText">劣Ⅳ类</div>
+                            <!-- Ⅰ Ⅱ Ⅲ Ⅵ Ⅴ Ⅳ -->
+                        </div>
+                        <div class="keyContent flex1">
+                            <div class="contentList">
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">所属流域：
+                                        <span class="leftRowValue">长江干流</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">所属区域：
+                                        <span class="leftRowValue">鄂州市-华容区</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">控制级别：
+                                        <span class="leftRowValue">国控</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">水质考核标准：
+                                        <span class="leftRowValue">Ⅴ类</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tablistsBox">
+                        <ul class="selfTabs flexBlock" role="tablist">
+                            <li class="selfTab active" data-content="sha_data">监测数据</li>
+                            <li class="selfTab " data-content="sha_photo">现场照片</li>
+                            <li class="selfTab " data-content="sha_video">现场视频</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 监测数据  start -->
+                        <div class="tab-pane active sha_data" id="sha_data">
+                            <ul class="canvasTab flexBlock">
+                                <li class="tabLi flex1  barGraph active">水质评价</li>
+                                <li class="tabLi flex1 lineGraph ">氨氮</li>
+                                <li class="tabLi longerText lineGraph">高锰酸钾指数</li>
+                                <li class="tabLi longerText lineGraph">化学需氧量</li>
+                                <li class="tabLi flex1 lineGraph">溶解氧</li>
+                                <li class="tabLi flex1 lineGraph">总磷</li>
+                            </ul>
+                            <div class="updateTime">更新时间:
+                                <span>2018-12</span>
+                            </div>
+                            <div class="popUpcanvasBox barCanvas active" id="ShaCanvasBar">
+                            </div>
+                            <div class="popUpcanvasBox lineCanvas " id="ShaCanvasLine">
+                            </div>
+                        </div>
+                        <!-- 监测数据  end -->
+                        <!-- 现场照片  start -->
+                        <div class="tab-pane" id="sha_photo">
+                            <div id="carousel01" class=" carousel slide carousel01" data-ride="carousel">
+                                <!-- Indicators -->
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img class="img-responsive" src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption active">
+                                            <p class="li-heading ">照片时间：
+                                                <span> 2018-10-11</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading ">照片时间：
+                                                <span> 2018-11-12</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading ">照片时间：
+                                                <span> 2018-11-13</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="arrowIcon leftIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="arrowIcon rightIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- 现场照片  end -->
+                        <!-- 现场视频  start -->
+                        <div class="tab-pane " id="sha_video">
+                            <div class="videoDiv" style="width: 100%; height: 100%;">
+                                <video id="video1" class="video" width="100%" height="100%" poster="./images/u75.jpg" webkit-playsinline="true" playsinline="true"
+                                    type="video/mp4" preload="" x5-video-player-type="h5" src="./images/jebsen.mp4">
+
+                                </video>
+                                <div class="controlDiv">
+                                    <span class="controlIcon pause"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 现场视频  end -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 弹窗1 纱帽 end -->
+        <!-- 弹窗2 开发区 start -->
+        <div class="PopUpBox show  PopUpBox_kai" id="PopUpBox_kai">
+            <div class="PopUpHeader">
+                <div class="PaddingContent">
+                    <h3>凡口开发区</h3>
+                    <span class="inlineBlock PopUpclose"></span>
+                </div>
+            </div>
+            <!-- PopUpHeader end-->
+            <div class="PopUpContent">
+                <div class="PaddingContent">
+                    <div class="flexBlock levelContainer">
+                        <div class="  levelBox sixLevel">
+                            <!-- 根据等级样式为 Ⅰ类对应样式为 oneLevel twoLevel  ...-->
+                            <div class="polluEcharts" id="polluEcharts">
+                            </div>
+                            <div class="assTextDiv">
+                                <div class="assText">优</div>
+                            </div>
+
+                            <!-- Ⅰ Ⅱ Ⅲ Ⅵ Ⅴ Ⅳ -->
+                        </div>
+                        <div class="keyContent flex1">
+                            <div class="contentList">
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">所属区域：
+                                        <span class="leftRowValue">鄂州市-华容区</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">控制级别：
+                                        <span class="leftRowValue">国控</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">首要污染物：
+                                        <span class="leftRowValue">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tablistsBox">
+                        <ul class="selfTabs flexBlock" role="tablist">
+                            <li class="selfTab active" data-content="kai_data">监测数据</li>
+                            <li class="selfTab " data-content="kai_photo">现场照片</li>
+                            <li class="selfTab " data-content="kai_video">现场视频</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 监测数据  start -->
+                        <div class="tab-pane active kai_data" id="kai_data">
+                            <ul class="canvasTab flexBlock">
+                                <li class="tabLi flex1  lineGraph active">AQI</li>
+                                <li class="tabLi flex1 lineGraph ">SO
+                                    <sub>2</sub>
+                                </li>
+                                <li class="tabLi flex1 lineGraph">NO
+                                    <sub>2</sub>
+                                </li>
+                                <li class="tabLi flex1 lineGraph">CO</li>
+                                <li class="tabLi flex1 lineGraph">O
+                                    <sub>3</sub>
+                                </li>
+                                <li class="tabLi flex1 lineGraph">PM
+                                    <sub>2.5</sub>
+                                </li>
+                                <li class="tabLi flex1 lineGraph">PM
+                                    <sub>10</sub>
+                                </li>
+                            </ul>
+                            <div class="updateTime">更新时间:
+                                <span>2018-12-10 10:00</span>
+                            </div>
+
+                            <div class="popUpcanvasBox lineCanvas active" id="KaiCanvasLine">
+                            </div>
+                        </div>
+                        <!-- 监测数据  end -->
+                        <!-- 现场照片  start -->
+                        <div class="tab-pane" id="kai_photo">
+                            <div id="carousel02" class=" carousel slide carousel02" data-ride="carousel">
+                                <!-- Indicators -->
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img class="img-responsive" src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption active">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-10-11</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-11-12</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-11-13</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="arrowIcon leftIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="arrowIcon rightIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- 现场照片  end -->
+                        <!-- 现场视频  start -->
+                        <div class="tab-pane " id="kai_video">
+                            <div class="videoDiv" style="width: 100%; height: 100%;">
+                                <video id="video2" class="video" width="100%" height="100%" poster="./images/u75.jpg" webkit-playsinline="true" playsinline="true"
+                                    type="video/mp4" preload="" x5-video-player-type="h5" src="./images/jebsen.mp4">
+
+                                </video>
+                                <div class="controlDiv">
+                                    <span class="controlIcon pause"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 现场视频  end -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 弹窗1 开发区 end -->
+        <!-- 弹窗3 污染源 start -->
+        <div class="PopUpBox show  PopUpBox_pol" id="PopUpBox_pol">
+            <div class="PopUpHeader">
+                <div class="PaddingContent">
+                    <h3>鄂州石化</h3>
+                    <span class="inlineBlock PopUpclose"></span>
+                </div>
+            </div>
+            <!-- PopUpHeader end-->
+            <div class="PopUpContent">
+                <div class="PaddingContent">
+                    <div class="flexBlock levelContainer">
+                        <div class="keyContent flex1">
+                            <div class="contentList">
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">污染源地址：
+                                        <span class="leftRowValue">鄂州市华容区XXX号</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">统一社会信用代码：
+                                        <span class="leftRowValue">111111111111111111</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">污染源类别：
+                                        <span class="leftRowValue">化工污染源</span>
+                                    </div>
+                                </div>
+                                <div class="contentLi flexBlock">
+                                    <div class="leftRow flex1">控制类型：
+                                        <span class="leftRowValue">省控</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tablistsBox">
+                        <ul class="selfTabs flexBlock" role="tablist">
+                            <li class="selfTab active" data-content="pol_data">监测数据</li>
+                            <li class="selfTab " data-content="pol_photo">现场照片</li>
+                            <li class="selfTab " data-content="pol_video">现场视频</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 监测数据  start -->
+                        <div class="tab-pane active pol_data" id="pol_data">
+                            <ul class="canvasTab flexBlock">
+                                <li class="tabLi flex1  lineGraph active">废气</li>
+                                <li class="tabLi flex1 lineGraph ">废水</li>
+                                <li class="tabLi flex1 lineGraph">二氧化硫</li>
+                                <li class="tabLi flex1 lineGraph">氮氧化物</li>
+                                <li class="tabLi flex1 lineGraph">烟尘</li>
+                            </ul>
+                            <div class="canvasTab alignRight">
+                                <div class="InfoListContent flexBlock polSelct" id="polSelct">
+                                    <div class="selectLi flex1">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="updateTime">更新时间:
+                                <span>2018-12-10</span>
+                            </div>
+
+                            <div class="popUpcanvasBox lineCanvas active" id="PolCanvasLine">
+                            </div>
+
+                        </div>
+                        <!-- 监测数据  end -->
+                        <!-- 现场照片  start -->
+                        <div class="tab-pane" id="pol_photo">
+                            <div id="carousel03" class=" carousel slide carousel03" data-ride="carousel">
+                                <!-- Indicators -->
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img class="img-responsive" src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption active">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-10-11</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-11-12</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img data-src="./images/u75.jpg" alt="...">
+                                        <div class="carousel-caption selfCarouselCaption">
+                                            <p class="li-heading headTwoLine">照片时间：
+                                                <span> 2018-11-13</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="arrowIcon leftIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="arrowIcon rightIcon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- 现场照片  end -->
+                        <!-- 现场视频  start -->
+                        <div class="tab-pane " id="pol_video">
+                            <div class="videoDiv" style="width: 100%; height: 100%;">
+                                <video id="video3" class="video" width="100%" height="100%" poster="./images/u75.jpg" webkit-playsinline="true" playsinline="true"
+                                    type="video/mp4" preload="" x5-video-player-type="h5" src="./images/jebsen.mp4">
+
+                                </video>
+                                <div class="controlDiv">
+                                    <span class="controlIcon pause"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 现场视频  end -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 弹窗1 污染源 end -->
+    </div>
+    <script src="./script/jquery-3.2.1.js"></script>
+
+    <script src="./script/canvas-bg.js"></script>
+    <script src="./script/echarts.min.js"></script>
+    <script src="./script/gasWater.js"></script>
+    <script src="./script/bootstrap.js"></script>
+    <script src="./script/popupMain.js"></script>
+    <script src="./script/popup.js"></script>
+</body>
+
+</html>

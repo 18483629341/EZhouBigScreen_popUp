@@ -1,0 +1,471 @@
+html {
+  font-size: 40px !important;
+}
+li {
+  list-style: none;
+}
+.flexBlock {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+.flex1 {
+  flex: 1;
+}
+.inlineBlock {
+  display: inline-block;
+}
+.clear {
+  clear: both;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.alignRight {
+  text-align: right!important;
+}
+/* 具体样式 start*/
+.PopUpBox {
+  display: none;
+  position: absolute;
+  width: 835px;
+  height: 820px;
+  top: 1080px;
+  left: 1920px;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background: #080b2f;
+  border: 1px solid #797979;
+  padding: 10px;
+}
+.PopUpBox_kai {
+  top: 1080px;
+  left: 2820px;
+}
+.PopUpBox_pol {
+  top: 1080px;
+  left: 3820px;
+}
+.PopUpBox.show {
+  display: block;
+}
+.PopUpHeader {
+  height: 72px;
+  padding-left: 36px;
+  border-bottom: 4px solid #ccc;
+  text-align: left;
+}
+.PopUpHeader .PaddingContent {
+  padding-top: 2px;
+  position: relative;
+}
+.PopUpHeader h3 {
+  font-size: 32px;
+  line-height: 70px;
+  color: #00ccff;
+}
+.PopUpHeader .PopUpclose {
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  right: 19px;
+  top: 21px;
+  background: url(../images/off.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.PopUpContent .PaddingContent {
+  padding-top: 7px;
+  text-align: left;
+}
+.PopUpContent .levelContainer {
+  height: 220px;
+  padding: 7px 36px 10px 36px;
+}
+.keyContent .contentList .contentLi {
+  font-weight: 700;
+  text-align: left;
+  line-height: 50px;
+  font-size: 20px;
+  color: #00ccff;
+}
+.tab-content {
+  width: 100%;
+  height: 414px;
+}
+.tab-content .tab-pane {
+  padding: 12px 20px 20px 20px;
+}
+.waterImg {
+  width: 72px;
+  height: 72px;
+  margin-top: 37px;
+  background: url(../images/u139.png) no-repeat;
+  background-size: 100% 100%;
+}
+.videoDiv {
+  position: relative;
+  top: -6px;
+}
+.controlDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  background: rgba(105, 105, 105, 0.3);
+  border-radius: 50%;
+}
+.controlDiv .controlIcon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 13px;
+  margin: 13px 18px;
+  background: url('../images/uplay.png');
+}
+.controlDiv .controlIcon.pause {
+  margin: 15px;
+  background: url('../images/upause.png');
+}
+.popUpcanvasBox {
+  width: 790px;
+  height: 396px;
+  margin-top: -35px;
+  display: none;
+}
+.active {
+  display: block;
+}
+.Popuplegend {
+  text-align: center;
+}
+.Popuplegend .OneLevel {
+  background: #fbe83a;
+}
+.Popuplegend .TwoLevel {
+  background: #00cdff;
+}
+.Popuplegend .LegendList {
+  padding-top: .3rem;
+}
+.Popuplegend .WaterQulLine {
+  top: -0.1rem;
+}
+.hrefDiv {
+  text-align: right;
+}
+.hrefDiv a {
+  font-size: .68rem;
+  line-height: 1rem;
+  color: #10ecff;
+  text-align: right;
+}
+.tablistsBox {
+  border-bottom: 4px solid #ccc;
+}
+.selfTabs {
+  margin: 0 0 7px 0;
+  width: 375px;
+  height: 36px;
+  text-align: center;
+}
+.selfTabs .selfTab {
+  color: #fff;
+  background: #080b2f;
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
+  flex: 1;
+  line-height: 36px;
+}
+.selfTabs .selfTab:first-child {
+  border: 1px solid #797979;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+.selfTabs .selfTab:last-child {
+  border: 1px solid #797979;
+  border-radius: 0 8px 8px 0;
+}
+.selfTabs .selfTab.active {
+  background: #00ccff;
+}
+.selfTabs .selfTab + .selfTab {
+  border-left: 1px solid #797979;
+}
+.canvasTab {
+  width: 375px;
+  height: 36px;
+  text-align: center;
+  width: 490px;
+  height: 32px;
+}
+.canvasTab .tabLi {
+  color: #fff;
+  background: #080b2f;
+  border-top: 1px solid #797979;
+  border-bottom: 1px solid #797979;
+}
+.canvasTab .tabLi:first-child {
+  border: 1px solid #797979;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  border-radius: 7px 0 0 7px;
+}
+.canvasTab .tabLi:last-child {
+  border: 1px solid #797979;
+  border-radius: 0 8px 8px 0;
+  border-radius: 0 7px 7px 0;
+}
+.canvasTab .tabLi.active {
+  background: #00ccff;
+}
+.canvasTab .tabLi + .tabLi {
+  border-left: 1px solid #797979;
+}
+.canvasTab .longerText {
+  width: 100px;
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+.canvasTab.alignRight {
+  float: right;
+  margin-top: .4rem;
+  height: 1.6rem;
+}
+.updateTime {
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  text-align: right;
+  color: #fff;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+.carousel .item > img {
+  width: 100%;
+  height: 100%;
+}
+.carousel .arrowIcon {
+  display: inline-block;
+  width: 20px;
+  height: 65px;
+  margin-top: 166px;
+}
+.carousel .leftIcon {
+  background: url('../images/u84.png') no-repeat;
+}
+.carousel .rightIcon {
+  background: url('../images/u89.png') no-repeat;
+}
+.selfCarouselCaption {
+  width: 26%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  padding: 8px 20px 12px;
+  text-align: left;
+  bottom: 36px;
+}
+.selfCarouselCaption .li-heading {
+  font-size: 14px;
+  line-height: 22px;
+  color: #e3e3e3;
+}
+.selfCarouselCaption:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.levelBox {
+  width: 200px;
+  height: 100%;
+}
+.levelBox .insideBox {
+  margin: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.levelBox .levelText {
+  width: 150px;
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+}
+.assTextDiv,
+.polluEcharts {
+  margin: 0;
+  width: 170px;
+}
+.polluEcharts {
+  height: 170px;
+}
+.assTextDiv {
+  height: 70px;
+  margin-top: -10px;
+  z-index: 2000;
+  background: -webkit-linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(rgba(8, 11, 47, 0.3), #080b2f);
+  /* 标准的语法 */
+}
+.assText {
+  background: #6eb720;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 22px;
+  text-align: center;
+  color: #fff;
+  width: 75px;
+  margin: 0 auto;
+}
+.levelBox.oneLevel .insideBox {
+  border: 4px solid #4ea9ff;
+}
+.levelBox.oneLevel .levelText {
+  color: #4ea9ff;
+}
+.levelBox.twoLevel .insideBox {
+  border: 4px solid #0067ff;
+}
+.levelBox.twoLevel .levelText {
+  color: #0067ff;
+}
+.levelBox.threeLevel .insideBox {
+  border: 4px solid #00ff00;
+}
+.levelBox.threeLevel .levelText {
+  color: #00ff00;
+}
+.levelBox.fourLevel .insideBox {
+  border: 4px solid #ffff00;
+}
+.levelBox.fourLevel .levelText {
+  color: #ffff00;
+}
+.levelBox.fiveLevel .insideBox {
+  border: 4px solid #fd2c08;
+}
+.levelBox.fiveLevel .levelText {
+  color: #fd2c08;
+}
+.levelBox.sixLevel .insideBox {
+  border: 4px solid #fc0105;
+}
+.levelBox.sixLevel .levelText {
+  color: #fc0105;
+}
+/*     某些弹窗的单独设置  */
+.PopUpBox_kai .contentList {
+  margin-top: 22px;
+}
+.PopUpBox_pol .canvasTab {
+  width: 356px;
+  margin: 0;
+  margin-left: 75px;
+}
+.pol_data,
+.kai_data,
+.sha_data {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.pol_data .updateTime,
+.kai_data .updateTime,
+.sha_data .updateTime {
+  padding-right: 0;
+}
+.canvasTab.alignRight {
+  height: .8rem;
+  display: block;
+  float: right;
+  margin-top: -32px;
+}
+.PopUpBox_pol .PopUpContent .levelContainer {
+  padding-left: 64px;
+}
+.InfoListContent {
+  float: right;
+  width: 3.5rem;
+  text-align: left;
+}
+.InfoListContent .selectLi {
+  border: 1px solid #00d1eb;
+  border-radius: .1rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: .35rem;
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  padding-left: .35rem;
+  position: relative;
+}
+.InfoListContent .selectLi .spanInner {
+  color: #fff;
+}
+.InfoListContent .selectLi .spanInner.active {
+  color: #00eafc;
+}
+.InfoListContent .selectLi .TreeList {
+  width: 3.5rem;
+  position: absolute;
+  display: none;
+  z-index: 100;
+  left: -0.01rem;
+  background: #080b2f;
+  border: 1px solid #00d1eb;
+  border-radius: .1rem;
+}
+.InfoListContent .selectLi .TreeList .treeLi {
+  width: 3.4rem;
+  height: .8rem;
+  line-height: .8rem;
+  color: #fff;
+  font-size: .35rem;
+  text-indent: .35rem;
+}
+.InfoListContent .selectLi .TreeList .treeLi.active {
+  color: #00eafc;
+}
+.InfoListContent .selectLi .TreeList.show {
+  display: block;
+}
+.InfoListContent .selectLi .dropIcon {
+  float: right;
+  margin-top: -0.45rem;
+}
+.InfoListContent .dropIcon {
+  margin-left: .35rem;
+  margin-right: .35rem;
+}
+.dropIcon {
+  width: .25rem;
+  height: .125rem;
+  background: url(../images/xlsj.png) no-repeat;
+  background-size: 100% 100%;
+}
+.rotatel {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
