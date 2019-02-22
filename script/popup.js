@@ -307,13 +307,11 @@ function polPraghToggle() {
 
 function selectToggle(canvasNo, elementClass) {
 	$("body").on('click', elementClass + ' .selectLi', function (e) {
-		console.log(" .selectLi");
 		//stopBubble(e);
 		$(elementClass + ' .TreeList').toggleClass('show');
 		$(elementClass + ' .dropIcon.icon').toggleClass('rotatel');
 	})
 	$("body").on('click', elementClass + ' .treeLi', function (e) {
-		console.log(" .treeLi");
 		//stopBubble(e);
 		var name = $(this).html();
 		var index = $(this).attr('data-key');
