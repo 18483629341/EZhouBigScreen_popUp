@@ -11,15 +11,17 @@ $(function () {
 	playCon3.selfVideoControl();
 
 	//纱帽弹窗上的线图   绘制
-	//柱状图
-	var echartsBar = echarts.init(document.getElementById('ShaCanvasBar'));
-	echartsBar.setOption(optionBar);
-	//线图
-	initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
-	popupObj0 = initPopupObjByData0.init('ShaCanvasLine');
-	initPopCanvas0 = new InitPopCanvas(popupObj0);
-	initPopCanvas0.initCanvas();
-	shaPraghToggle();
+		//线图
+		initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
+		popupObj0 = initPopupObjByData0.init('ShaCanvasLine');
+		initPopCanvas0 = new InitPopCanvas(popupObj0);
+		initPopCanvas0.initCanvas();
+		shaPraghToggle();
+		//柱状图
+		var echartsBar = echarts.init(document.getElementById('ShaCanvasBar'));
+		echartsBar.setOption(optionBar);
+        $('.PopUpBox_sha .lineGraph').removeClass('active');
+	
 	//开发区弹窗上的线图   绘制
 	//污染率
 	drawpollutionEcharts('38', 38, '#6eb720');
@@ -54,6 +56,26 @@ var waterAssData = { //！！！！！！！！！！！！！！！！！需要
 	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
 	arr: [1, 2, 3, 4, 5, 6, 4, 3, 3, 1, 6, 1]
 }
+var colorList = ['#1e90ff', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"];
+//  [{
+// 	colorStops: [{
+// 		offset: 0,
+// 		color: '#FFD119' // 0% 处的颜色
+// 	}, {
+// 		offset: 1,
+// 		color: '#FFAC4C' // 100% 处的颜色
+// 	}]
+// },
+// {
+// 	colorStops: [{
+// 		offset: 0,
+// 		color: '#00C0FA' // 0% 处的颜色
+// 	}, {
+// 		offset: 1,
+// 		color: '#2F95FA' // 100% 处的颜色
+// 	}]
+// }
+// ];
 var optionBar = { //样式设置相关
 	color: ['#1e90ff', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"],
 	//['#1e90ff', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"], //调色板
@@ -163,35 +185,17 @@ var optionBar = { //样式设置相关
 		legendHoverLink: true,
 		itemStyle: {
 			normal: {
-				color:function(params) {
-					// build a color map as your need.
-					console.log(params);
-					var colorList = [{
-							colorStops: [{
-								offset: 0,
-								color: '#FFD119' // 0% 处的颜色
-							}, {
-								offset: 1,
-								color: '#FFAC4C' // 100% 处的颜色
-							}]
-						},
-						{
-							colorStops: [{
-								offset: 0,
-								color: '#00C0FA' // 0% 处的颜色
-							}, {
-								offset: 1,
-								color: '#2F95FA' // 100% 处的颜色
-							}]
-						}
-					];
-					if (params.dataIndex < 3) {
-
-						return colorList[0]
-					} else {
-						return colorList[1]
-					}
-				},
+				color:new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: '#00b0ff'
+                }, {
+                    offset: 0.8,
+                    color: '#7052f4'
+                }], false),
+				// function(params) {	
+				// 	var index=params.dataIndex;
+				// 	return color=colorList[index];
+				// },
 				barBorderRadius: [8,8,0,0]
 			}
 		},

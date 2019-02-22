@@ -5,7 +5,7 @@ function popContorl() {
 		var _con = $('.PopUpBox '); // 设置目标区域 
 		if (!_con.is(e.target) && _con.has(e.target).length === 0) {
 			// 功能代码
-			//$('.PopUpBox').removeClass('show');
+			$('.PopUpBox').removeClass('show');
 		}
 	});
 	$("body").on('click', '.PopUpclose', function () {
