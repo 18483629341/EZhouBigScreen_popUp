@@ -385,13 +385,13 @@ li {
   margin-left: 75px;
 }
 .pol_data,
-.pol_data,
+.kai_data,
 .sha_data {
   padding-right: 0;
   padding-bottom: 0;
 }
 .pol_data .updateTime,
-.pol_data .updateTime,
+.kai_data .updateTime,
 .sha_data .updateTime {
   padding-right: 0;
 }
@@ -400,6 +400,9 @@ li {
   display: block;
   float: right;
   margin-top: -32px;
+}
+.PopUpBox_pol .PopUpContent .levelContainer {
+  padding-left: 64px;
 }
 .InfoListContent {
   float: right;

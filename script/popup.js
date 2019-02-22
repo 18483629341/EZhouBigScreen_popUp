@@ -55,7 +55,8 @@ var waterAssData = { //！！！！！！！！！！！！！！！！！需要
 	arr: [1, 2, 3, 4, 5, 6, 4, 3, 3, 1, 6, 1]
 }
 var optionBar = { //样式设置相关
-	color: ['#72e75e', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"], //调色板
+	color: ['#1e90ff', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"],
+	//['#1e90ff', '#1e90ff', "#00ccff", "#fd4800", "#f1ec3f", "#72e75e", "#cc00ff", '#1e90ff', "#00ccff", "#fd4800", '#00ff00', "#00ccff"], //调色板
 	tooltip: {
 		show: false,
 	},
@@ -159,6 +160,43 @@ var optionBar = { //样式设置相关
 		data: waterAssData.arr,
 		barCategoryGap: '80%',
 		type: 'bar',
+		legendHoverLink: true,
+		itemStyle: {
+			normal: {
+				color:function(params) {
+					// build a color map as your need.
+					console.log(params);
+					var colorList = [{
+							colorStops: [{
+								offset: 0,
+								color: '#FFD119' // 0% 处的颜色
+							}, {
+								offset: 1,
+								color: '#FFAC4C' // 100% 处的颜色
+							}]
+						},
+						{
+							colorStops: [{
+								offset: 0,
+								color: '#00C0FA' // 0% 处的颜色
+							}, {
+								offset: 1,
+								color: '#2F95FA' // 100% 处的颜色
+							}]
+						}
+					];
+					if (params.dataIndex < 3) {
+
+						return colorList[0]
+					} else {
+						return colorList[1]
+					}
+				},
+				barBorderRadius: [8,8,0,0]
+			}
+		},
+
+		progressive: 5000,
 
 	}]
 };
@@ -181,7 +219,7 @@ var dataSha = { //！！！！！！！！！！！！！！！！！需要后�
 }
 /*********popup2   线框图的相关数据 / 开发区 的数据对象数组***** */
 var dataKai = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
-	xData: ['10-01  00:00','10-01 02:00', '10-01  04:00', '10-01  06:00', '10-01  08:00', '10-01  10:00', '10-01  12:00', '10-01  14:00', '10-01  16:00', '10-01  18:00', '10-01  20:00', '10-01  22:00'],
+	xData: ['10-01  00:00', '10-01 02:00', '10-01  04:00', '10-01  06:00', '10-01  08:00', '10-01  10:00', '10-01  12:00', '10-01  14:00', '10-01  16:00', '10-01  18:00', '10-01  20:00', '10-01  22:00'],
 	promtArr: ['AQI', 'SO2', 'NO2', 'CO', 'O3', 'PM2.5', 'PM10'],
 	unit: ['mg/l'],
 	dataArr: [{
@@ -284,26 +322,26 @@ function selectToggle(canvasNo, elementClass) {
 			$(elementClass + ' .TreeList').removeClass('show');
 			$(elementClass + ' .dropIcon.icon').removeClass('rotatel');
 		}, 1000);
-		var getData=null;
+		var getData = null;
 
 
 		//发送数据请求             !!!!!!!!!!!!!!!需要后台根据'data-key'来发送请求
 		//$.getJSON("words.json", {pollId: index}, function (data) {
-			//var getData=data;  
-			//postCallback();
+		//var getData=data;  
+		//postCallback();
 		//});
-		getData = {//这个是假设的数据，
+		getData = { //这个是假设的数据，
 			'wasteGasArr': [40, 60, 55, 55, 55, 40, 60, 55, 140, 55, 40, 60],
 			'wasteWaterArr': [90, 60, 80, 70, 160, 80, 90, 60, 80, 90, 60, 80],
-			'SO2Arr': [140, 60, 55, 55,55, 40, 55, 140,  55, 140, 60, 60],
-			'nitOxiArr': [ 120, 70, 60, 80,80, 90, 160, 90, 60, 90, 60, 80], //溶解氧
-			'smokeArr': [88, 66, 50, 60, 155, 40,60, 155, 60,  60, 40, 56]
+			'SO2Arr': [140, 60, 55, 55, 55, 40, 55, 140, 55, 140, 60, 60],
+			'nitOxiArr': [120, 70, 60, 80, 80, 90, 160, 90, 60, 90, 60, 80], //溶解氧
+			'smokeArr': [88, 66, 50, 60, 155, 40, 60, 155, 60, 60, 40, 56]
 		}
 		postCallback();
 
 
-         //post请求后的回调函数
-		function postCallback(){
+		//post请求后的回调函数
+		function postCallback() {
 			var newPopupObj = null;
 			//根据排污口渲染数据；
 			newPopupObj = initPopupObjByData2.setPopupObj(getData); //根据i值变化数据源
