@@ -2,7 +2,7 @@ $(function () {
 	loadImg();
 	popContorl();
 	contentToggle();
-
+	$('.carousel-inner').children('.item:first').addClass('active');
 	var playCon1 = new PlayCon("sha_video", "video1");
 	playCon1.selfVideoControl();
 	var playCon2 = new PlayCon("kai_video", "video2");
