@@ -44,11 +44,11 @@ li {
   border: 1px solid #797979;
   padding: 10px;
 }
-.PopUpBox_kai {
+.PopUpBoxKai {
   top: 1080px;
   left: 2820px;
 }
-.PopUpBox_pol {
+.PopUpBoxPol {
   top: 1080px;
   left: 3820px;
 }
@@ -70,7 +70,7 @@ li {
   line-height: 70px;
   color: #00ccff;
 }
-.PopUpHeader .PopUpclose {
+.PopUpHeader .PopUpClose {
   position: absolute;
   width: .5rem;
   height: .5rem;
@@ -113,7 +113,7 @@ li {
   position: relative;
   top: -6px;
 }
-.controlDiv {
+.ControlDiv {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,7 +123,7 @@ li {
   background: rgba(105, 105, 105, 0.3);
   border-radius: 50%;
 }
-.controlDiv .controlIcon {
+.ControlDiv .controlIcon {
   display: block;
   width: 64px;
   height: 64px;
@@ -131,7 +131,7 @@ li {
   margin: 13px 18px;
   background: url('../images/uplay.png');
 }
-.controlDiv .controlIcon.pause {
+.ControlDiv .controlIcon.pause {
   margin: 15px;
   background: url('../images/upause.png');
 }
@@ -376,23 +376,23 @@ li {
   color: #fc0105;
 }
 /*     某些弹窗的单独设置  */
-.PopUpBox_kai .contentList {
+.PopUpBoxKai .contentList {
   margin-top: 22px;
 }
-.PopUpBox_pol .canvasTab {
+.PopUpBoxPol .canvasTab {
   width: 356px;
   margin: 0;
   margin-left: 75px;
 }
 .pol_data,
 .kai_data,
-.sha_data {
+.shou_data {
   padding-right: 0;
   padding-bottom: 0;
 }
 .pol_data .updateTime,
 .kai_data .updateTime,
-.sha_data .updateTime {
+.shou_data .updateTime {
   padding-right: 0;
 }
 .canvasTab.alignRight {
@@ -401,7 +401,7 @@ li {
   float: right;
   margin-top: -32px;
 }
-.PopUpBox_pol .PopUpContent .levelContainer {
+.PopUpBoxPol .PopUpContent .levelContainer {
   padding-left: 64px;
 }
 .InfoListContent {

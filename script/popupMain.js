@@ -8,10 +8,10 @@ function popContorl() {
 			$('.PopUpBox').removeClass('show');
 		}
 	});
-	$("body").on('click', '.PopUpclose', function () {
+	$("body").on('click', '.PopUpClose', function () {
 		$('.PopUpBox').removeClass('show');
 	})
-	$("body").on('click', '.ax_default', function () {
+	$("body").on('click', '.AxDefault', function () {
 		$('.PopUpBox').toggleClass('show');
 	})
 }
@@ -56,7 +56,7 @@ function PlayCon(videoConEleId, videoEleId) {
 			var e = window.event ? window.event : e;    
 			var keyCode = e.which ? e.which : e.keyCode;     //tab
 			    
-			if (keyCode == 32) {      
+			if (keyCode === 32) {      
 				//common.lastTabTime = new Date();
 				_this.toggle();    
 			}  
@@ -65,12 +65,12 @@ function PlayCon(videoConEleId, videoEleId) {
 	this.toggle = function () {
 		if (this.Ele.paused) { //如果是播放按钮，则一直显示
 			this.Ele.play();
-			$("#" + this.id).siblings(".controlDiv").fadeOut();
-			$("#" + this.id).siblings(".controlDiv").find(".controlIcon").addClass('pause');
+			$("#" + this.id).siblings(".ControlDiv").fadeOut();
+			$("#" + this.id).siblings(".ControlDiv").find(".controlIcon").addClass('pause');
 		} else { //如果是暂停按钮，则显示一会儿，等一会然后
 			this.Ele.pause();
-			$("#" + this.id).siblings(".controlDiv").fadeIn();
-			$("#" + this.id).siblings(".controlDiv").find(".controlIcon").removeClass('pause');
+			$("#" + this.id).siblings(".ControlDiv").fadeIn();
+			$("#" + this.id).siblings(".ControlDiv").find(".controlIcon").removeClass('pause');
 		}
 	}
 
@@ -88,10 +88,10 @@ function InitPopCanvas(obj) {
 		this._obj = newObj
 	}
 	this.initCanvas = function () {
-		let _colors = [];
-		let _series = [];
+		var _colors = [];
+		var _series = [];
 		var noActiveN = 0;
-		for (let i = 0; i < this.lineGraphS.length; i++) {
+		for (var i = 0; i < this.lineGraphS.length; i++) {
 			var item = this.lineGraphS[i];
 			//if(item.className.)
 			if (hasActive(item.className)) {
@@ -101,7 +101,7 @@ function InitPopCanvas(obj) {
 				noActiveN++;
 			}
 
-			if (noActiveN == this.lineGraphS.length) { //至少显示第一条
+			if (noActiveN === this.lineGraphS.length) { //至少显示第一条
 				_colors = this._obj.colorArr[0];
 				_series = this._obj.seriesArr[0];
 				$(this.lineGraphS[0]).addClass('active');
@@ -214,29 +214,29 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 	this.dataArr = Obj.dataArr;
 	this.pollNameList=Obj.pollNameList;
 	this.initTablist = function () { //初始化某个弹幕的选框的dom
-		let inhtml = '';
-		inhtml = '<span class="selectSpan ">' +
+		var innerHtml = '';
+		innerHtml = '<span class="selectSpan ">' +
 			'<span class="spanInner active" data-key="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[0].pollName + '</span>' +
 			'<i class="icon dropIcon"></i>' +
 			'</span>' +
 			'<ul class="TreeList" >';
-		let listArr = '';
-		for (let i = 0; i < this.pollNameList.length; i++) {
-			let lihtml = '';
-			if (i == 0) {
+		var listArr = '';
+		for (var i = 0; i < this.pollNameList.length; i++) {
+			var lihtml = '';
+			if (i === 0) {
 				lihtml = '<li class="treeLi active" data-index="'+this.pollNameList[0].pollId+'" >' + this.pollNameList[i].pollName + '</li>'
 			} else {
 				lihtml = '<li class="treeLi" data-index="'+this.pollNameList[i].pollId+'">' + this.pollNameList[i].pollName + '</li>'
 			}
 			listArr += lihtml;
 		}
-		inhtml += listArr;
-		inhtml += '</ul>';
-		$(this.popUpDataObj.elementClass + ' .selectLi').html(inhtml);
+		innerHtml += listArr;
+		innerHtml += '</ul>';
+		$(this.popUpDataObj.elementClass + ' .selectLi').html(innerHtml);
 	}
 	this.init = function (elementId) {
 		//生成需要渲染第一排污口的线图的 数据  
-		let obj = this.setPopupObj(this.dataArr[0]);
+		var obj = this.setPopupObj(this.dataArr[0]);
 		obj.elementId = elementId;
 		return obj
 	}
@@ -248,8 +248,8 @@ function InitPopupObjByData(elementClass, Obj) { //将数据库转化为绘图 �
 		popupObj2.unit = Obj.unit||'mg/l';
 		var keys = Object.keys(obj);
 		popupObj2.seriesArr = [];
-		for (let i = 0; i < keys.length; i++) {
-			let item = keys[i];
+		for (var i = 0; i < keys.length; i++) {
+			var item = keys[i];
 			var seryObj = {
 				name: Obj.promtArr[i],
 				type: 'line',
@@ -292,10 +292,10 @@ function drawpollutionEcharts(text, val, bg){
     const num1 = value1 / 2;
     const num2 = value2 / 2;
     const series = [];
-    for (let i = 0; i < num1; i++) {
+    for (var i = 0; i < num1; i++) {
       series.push(setValue(1, bg), setValue(1, 'transparent'));
     }
-    for (let i = 0; i < num2; i++) {
+    for (var i = 0; i < num2; i++) {
       series.push(setValue(1, '#95989b'), setValue(1, 'transparent'));
     }
     series.push(setValue(25, 'transparent'));
@@ -397,7 +397,7 @@ function cloneObj(origin, target) {
 	var target = target || {};
 	if (origin instanceof Array) {
 		target = [];
-	} else if (origin == null) { //null或者undefined时
+	} else if (origin === null) { //null或者undefined时
 		target = origin;
 	}
 	for (var key in origin) { //此方法即可遍历对象，也可遍历数组

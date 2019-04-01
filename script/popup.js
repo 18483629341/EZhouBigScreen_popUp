@@ -12,7 +12,7 @@ $(function () {
 
 	//纱帽弹窗上的线图   绘制
 		//线图
-		initPopupObjByData0 = new InitPopupObjByData('.PopUpBox_sha', dataSha);
+		initPopupObjByData0 = new InitPopupObjByData('.PopUpBoxShou', dataSha);
 		popupObj0 = initPopupObjByData0.init('ShaCanvasLine');
 		initPopCanvas0 = new InitPopCanvas(popupObj0);
 		initPopCanvas0.initCanvas();
@@ -20,20 +20,20 @@ $(function () {
 		//柱状图
 		var echartsBar = echarts.init(document.getElementById('ShaCanvasBar'));
 		echartsBar.setOption(optionBar);
-        $('.PopUpBox_sha .lineGraph').removeClass('active');
+        $('.PopUpBoxShou .lineGraph').removeClass('active');
 	
 	//开发区弹窗上的线图   绘制
 	//污染率
 	drawpollutionEcharts('38', 38, '#6eb720');
 	//线图
-	initPopupObjByData1 = new InitPopupObjByData('.PopUpBox_kai', dataKai);
+	initPopupObjByData1 = new InitPopupObjByData('.PopUpBoxKai', dataKai);
 	popupObj1 = initPopupObjByData1.init('KaiCanvasLine');
 	initPopCanvas1 = new InitPopCanvas(popupObj1);
 	initPopCanvas1.initCanvas();
 	kaiPraghToggle();
 	//污染源弹窗上的线图   绘制
 	//线图
-	initPopupObjByData2 = new InitPopupObjByData('.PopUpBox_pol', dataPol);
+	initPopupObjByData2 = new InitPopupObjByData('.PopUpBoxPol', dataPol);
 	initPopupObjByData2.initTablist(); //需要展示选项框，调用此法；
 	popupObj2 = initPopupObjByData2.init('PolCanvasLine');
 	initPopCanvas2 = new InitPopCanvas(popupObj2);
@@ -266,41 +266,41 @@ var dataPol = { //！！！！！！！！！！！！！！！！！需要后�
 
 
 function shaPraghToggle() {
-	$("body").on('click', '.PopUpBox_sha .lineGraph', function () {
+	$("body").on('click', '.PopUpBoxShou .lineGraph', function () {
 		$(this).toggleClass('active');
-		$('.PopUpBox_sha .barGraph').removeClass('active');
+		$('.PopUpBoxShou .barGraph').removeClass('active');
 
-		$('.PopUpBox_sha .barCanvas').removeClass('active');
-		$('.PopUpBox_sha .lineCanvas').addClass('active');
+		$('.PopUpBoxShou .barCanvas').removeClass('active');
+		$('.PopUpBoxShou .lineCanvas').addClass('active');
 		initPopCanvas0.initCanvas();
 	})
-	$("body").on('click', '.PopUpBox_sha .barGraph', function () {
+	$("body").on('click', '.PopUpBoxShou .barGraph', function () {
 		$(this).addClass('active');
-		$('.PopUpBox_sha .lineGraph').removeClass('active');
+		$('.PopUpBoxShou .lineGraph').removeClass('active');
 
-		$('.PopUpBox_sha .lineCanvas').removeClass('active');
-		$('.PopUpBox_sha .barCanvas').addClass('active');
+		$('.PopUpBoxShou .lineCanvas').removeClass('active');
+		$('.PopUpBoxShou .barCanvas').addClass('active');
 	})
 }
 
 function kaiPraghToggle() {
-	$("body").on('click', '.PopUpBox_kai .lineGraph', function () {
+	$("body").on('click', '.PopUpBoxKai .lineGraph', function () {
 		$(this).toggleClass('active');
-		$('.PopUpBox_kai .barGraph').removeClass('active');
+		$('.PopUpBoxKai .barGraph').removeClass('active');
 
-		//$('.PopUpBox_kai .barCanvas').removeClass('active');
-		$('.PopUpBox_kai .lineCanvas').addClass('active');
+		//$('.PopUpBoxKai .barCanvas').removeClass('active');
+		$('.PopUpBoxKai .lineCanvas').addClass('active');
 		initPopCanvas1.initCanvas();
 	})
 }
 
 function polPraghToggle() {
-	$("body").on('click', '.PopUpBox_pol .lineGraph', function () {
+	$("body").on('click', '.PopUpBoxPol .lineGraph', function () {
 		$(this).toggleClass('active');
-		$('.PopUpBox_pol .barGraph').removeClass('active');
+		$('.PopUpBoxPol .barGraph').removeClass('active');
 
-		//$('.PopUpBox_pol .barCanvas').removeClass('active');
-		$('.PopUpBox_pol .lineCanvas').addClass('active');
+		//$('.PopUpBoxPol .barCanvas').removeClass('active');
+		$('.PopUpBoxPol .lineCanvas').addClass('active');
 		initPopCanvas2.initCanvas();
 	})
 }
