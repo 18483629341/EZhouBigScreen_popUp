@@ -10,15 +10,15 @@ $(function () {
 	var playCon3 = new PlayCon("pol_video", "video3");
 	playCon3.selfVideoControl();
 
-	//纱帽弹窗上的线图   绘制
+	//手动站弹窗上的线图   绘制
 		//线图
-		initPopupObjByData0 = new InitPopupObjByData('.PopUpBoxShou', dataSha);
-		popupObj0 = initPopupObjByData0.init('ShaCanvasLine');
+		initPopupObjByData0 = new InitPopupObjByData('.PopUpBoxShou', dataShou);
+		popupObj0 = initPopupObjByData0.init('ShouCanvasLine');
 		initPopCanvas0 = new InitPopCanvas(popupObj0);
 		initPopCanvas0.initCanvas();
 		shaPraghToggle();
 		//柱状图
-		var echartsBar = echarts.init(document.getElementById('ShaCanvasBar'));
+		var echartsBar = echarts.init(document.getElementById('ShouCanvasBar'));
 		echartsBar.setOption(optionBar);
         $('.PopUpBoxShou .lineGraph').removeClass('active');
 	
@@ -51,7 +51,7 @@ var initPopCanvas1 = null;
 var initPopupObjByData2 = null;
 var popupObj2 = null;
 var initPopCanvas2 = null;
-/*********popup1   柱状图的相关数据 / 纱帽 的数据对象数组***** */
+/*********popup1   柱状图的相关数据 / 手动站 的数据对象数组***** */
 var waterAssData = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
 	arr: [1, 2, 3, 4, 5, 6, 4, 3, 3, 1, 6, 1]
@@ -204,8 +204,8 @@ var optionBar = { //样式设置相关
 
 	}]
 };
-/*********popup1   线框图的相关数据 / 纱帽 的数据对象数组***** */
-var dataSha = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
+/*********popup1   线框图的相关数据 / 手动站 的数据对象数组***** */
+var dataShou = { //！！！！！！！！！！！！！！！！！需要后台传输的数据
 	xData: ['10-01', '10-02', '10-03', '10-04', '10-05', '10-06', '10-07', '10-08', '10-09', '10-10', '10-11', '10-12'],
 	promtArr: ['氨氮', '高锰酸钾指数', '化学需氧量', '溶解氧', '总磷'],
 	unit: ['mg/l'],
